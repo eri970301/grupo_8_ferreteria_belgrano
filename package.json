@@ -1,0 +1,24 @@
+{
+  "name": "grupo_8_ferreteria_belgrano",
+  "version": "1.0.0",
+  "description": "Integrantes:",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eri970301/grupo_8_ferreteria_belgrano.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eri970301/grupo_8_ferreteria_belgrano/issues"
+  },
+  "homepage": "https://github.com/eri970301/grupo_8_ferreteria_belgrano#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
+}
