@@ -1,0 +1,29 @@
+:root{
+    --main-color: #de2e30;
+    --second-color: #000;
+    --accent-color: #fff;
+    --second-accent-color: #eadede
+}
+*{
+   margin: 0; 
+}
+header{
+    background-color: var(--main-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.top_bar, .bottom_bar{
+    display: none;
+}
+.logo_img{
+    width: 70px;
+}
+.mobile_bar{
+    color:var(--accent-color);
+}
+.mobile_bar i{
+    font-size: 30px
+}

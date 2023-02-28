@@ -1,0 +1,10 @@
+:root{
+    --main-color: #de2e30;
+    --second-color: #000;
+    --accent-color: #fff;
+    --second-accent-color: #eadede
+}
+
+body{
+    background: #eadede
+}

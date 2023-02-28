@@ -7,6 +7,9 @@ app.use(express.static(path.resolve(__dirname, '../public')))
 app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname, './views/index.html'))
 })
+app.get('/loco', function (req, res) {
+    res.sendFile(path.resolve(__dirname, './views/loco.html'))
+})
 
 const port = process.env.PORT || 3000;
 
