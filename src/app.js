@@ -10,6 +10,9 @@ app.get('/', function (req, res) {
 app.get('/loco', function (req, res) {
     res.sendFile(path.resolve(__dirname, './views/loco.html'))
 })
+app.get("/registro", function(req, res){
+    res.sendFile(path.resolve(__dirname,"./views/register.html"))
+});
 
 const port = process.env.PORT || 3000;
 
