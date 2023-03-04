@@ -14,6 +14,10 @@ app.get("/registro", function(req, res){
     res.sendFile(path.resolve(__dirname,"./views/register.html"))
 });
 
+app.get("/producto", function(req, res){
+    res.sendFile(path.resolve(__dirname,"./views/product.html"))
+});
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, function () {
