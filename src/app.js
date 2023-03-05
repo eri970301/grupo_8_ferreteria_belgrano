@@ -18,6 +18,11 @@ app.get("/producto", function(req, res){
     res.sendFile(path.resolve(__dirname,"./views/product.html"))
 });
 
+let login = path.resolve(__dirname, "./views/login.html")
+app.get("/login.html", (req, res) => {
+    res.sendFile(login)
+})
+
 const port = process.env.PORT || 3000;
 
 app.listen(port, function () {
