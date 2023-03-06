@@ -1,12 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root{
+    --main-color: #de2e30;
+    --second-color: #000;
+    --accent-color: #fff;
+    --second-accent-color: #eadede
+} 
 
 footer {
     background-color: #de2e30;
     border-top: solid 3px #000;
     margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
 }
-
+.footer_logo_img{
+    width: 100px;
+    padding-bottom: 30px;
+}
+.footer_nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.footer_nav ul a{
+    color: var(--accent-color);
+}
 .footer_info a{
     color: #fff;
     text-decoration: none;
+}
+.footer_about{
+    color: var(--accent-color)
+}
+footer h4{
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+.footer_socials{
+    padding: 10px 10px 0px 10px;
+}
+.footer_socials i{
+    font-size: 21px;
+    padding: 7px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    margin-left: 10px;
+    color: var(--accent-color);
+}
+@media(min-width: 768px){
+    footer{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .footer_nav ul{
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+    .footer_nav li{
+        padding-right: 10px;
+    }
+    .footer_logo{
+        width: 50%;
+    }
+    .footer_about{
+        width: 55%;
+    }
+    .footer_about p, .footer_about h4{
+        text-align: initial;
+    }
+    .footer_socials{
+        text-align: end;
+    }
+    .footer_logo{
+        text-align: start;
+    }
+    .footer_container{
+        max-width: 1280px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media(min-width: 1280px){
+    .footer_logo{
+        display: flex;
+    }
+    .footer_logo_img{
+        width: 160px;
+        padding-bottom: 0px;
+        height: -webkit-fill-available;
+    }
+    .footer_nav{
+        display: flex;
+        align-items: end;
+    }
 }
