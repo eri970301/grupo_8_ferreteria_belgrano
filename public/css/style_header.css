@@ -20,44 +20,51 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-.top_bar,
-.bottom_bar {
-    display: none;
+.header_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 .logo_img {
     width: 70px;
 }
-
+.top_bar_search, nav, .top_bar_icons, .bottom_bar{
+    display: none;
+}
 .mobile_bar {
     color: var(--accent-color);
+    margin-right: 20px;
 }
 
 .mobile_bar i {
     font-size: 30px
 }
-
+.logo:not(.top_bar){
+    display: flex;
+}
 @media(min-width: 768px) {
-    .top_bar, .bottom_bar{
+    .top_bar_search, nav, .top_bar_icons, .bottom_bar{
         display: flex;
     }
     header {
         display: flex;
+        width: 100%;
         flex-direction: row;
         justify-content: center;
-        gap: 30px 20px
+        gap: 30px 20px;
     }
-    .logo{
-        width: 10%;
-    }
-    .header-content{
-        width: 90%;
+    .header_content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .top_bar{
-        justify-content: space-between;
         margin: 16px;
         align-items: center;
+        display: flex;
+        gap: 15px
     }
     .top_bar_icons i{
         font-size: 21px;
@@ -71,8 +78,8 @@ header {
         list-style: none;
         display: flex;
         flex-direction: row;
-        gap: 10px;
-        margin-right: 4px;
+        gap: 8px;
+        padding: 5px;
     }
     .top_bar nav ul li{
         color: var(--accent-color);
@@ -86,7 +93,7 @@ header {
     }
     .top_bar_search i{
         color: var(--accent-color);
-        font-size: 21px;
+        font-size: 15px;
         border: 2px solid var(--accent-color);
         border-radius: 0px 40px 40px 0px;
         padding: 5px;
@@ -94,6 +101,44 @@ header {
     .top_bar_search input{
         border: none;
         padding: 7px;
-        border-radius: 40px 0px 0px 40px
-    };
+        border-radius: 40px 0px 0px 40px;
+        width: 230px;
+    }
+    .top_bar_search{
+        display: flex;
+        align-items: center;
+    }
+    .bottom_bar{
+        margin: 0px 10px 10px;
+        color: var(--accent-color);
+    }
+    .bottom_bar label{
+        position: relative;
+        margin-right: 30px;
+    }
+    select {
+        appearance: none;
+        outline: 0;
+        border: 0;
+        box-shadow: none;
+        position: absolute;
+        color: #fff;
+        background-color: transparent;
+        background-image: none;
+        cursor: pointer;
+        right: 0;
+        width: 100%;
+        margin-top: 10px;
+      }
 }
+@media(min-width: 1280px){
+    .top_bar{
+        gap: 80px;
+    }
+    .bottom_bar label{
+        margin: 0 30px 0 30px
+    }
+    .top_bar nav ul{
+        gap: 30px;
+    }
+  }
