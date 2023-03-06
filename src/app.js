@@ -19,7 +19,7 @@ app.get("/producto", function(req, res){
 });
 
 let login = path.resolve(__dirname, "./views/login.html")
-app.get("/login.html", (req, res) => {
+app.get("/login", (req, res) => {
     res.sendFile(login)
 })
 

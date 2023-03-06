@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root{
+    --main-color: #de2e30;
+    --second-color: #000;
+    --accent-color: #fff;
+    --second-accent-color: #eadede
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    text-align: center;
+}
+
+body{
+    background: #eadede;
+    font-family: 'Lato', sans-serif;
+}
+
+.seleccionado {
+   padding: 10px;
+   text-align: left;
+}
+
+h1 {
+    margin: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.fotos {
+    width: 90%;
+    padding: 3%;
+}
+
+.mas-fotos {
+    display: flex;
+}
+
+.foto02, .foto03, .foto04, .foto05 {
+    width: 15vw;
+    padding: 5px;
+    max-width: 110px;
+    border: solid 1px #000;
+    margin: 0.2em;
+}
+
+#flecha {
+    font-size: 10vw;
+    margin: 0.2em;
+}
+
+#precio {
+    text-align: left;
+    margin: 15px;
+}
+
+.envios {
+    border: solid 2px #000;
+    width: 60%;
+    padding: 10px;
+    margin-top: 1em;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1em;
+    background-color: #fff;
+}
+
+#truck {
+    width: auto;
+    max-width: 32px;
+    display: flex;
+    text-align: left;
+    padding: 5px;
+    margin-right: 1px;
+    color: rgb(5, 172, 5);
+}
+
+.stock {
+    color: rgb(5, 172, 5);
+    margin-top: 5%;
+}
+
+.cantidad {
+    margin-top: 5%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.cantidad-texto {
+    display: inline-block;
+}
+
+#seleccionar-cantidad {
+    border: none;
+    color: rgb(5, 172, 5)
+}
+
+.botones {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.comprar {
+    width: 50vw;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: larger;
+    padding: 3px;
+    margin-bottom: 0.5em;
+}
+
+#sumar-al-carrito {
+    width: 50vw;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: larger;
+    padding: 3px;
+}
+
+
+table {
+    width: 80%;;
+}
+
+table, tr, td {
+    border-collapse: collapse;
+    border: solid 1px #000;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #fff;
+}
+
+.descripcion {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+     margin-right: 1em;
+}
+
+.descripcion p {
+    margin-top: 1em;
+}
+
+.similar1, .similar2 {
+    text-align: left;
+    display: flex;
+}
+
+.img-similar {
+    width: 30%;
+    padding-left: 1em;
+    display: flex;
+}
+
+.container-texto {
+    text-align: left;
+}
+
+.texto-similar {
+    vertical-align: top;
+    margin-top: 0.5em;
+}
+.precio {
+    vertical-align: bottom;
+    text-align: left;
+}
+
+footer {
+    background-color: #de2e30;
+    border-top: solid 3px #000;
+    margin-top: 1em;
+}
+
+.footer_info a{
+    color: #fff;
+    text-decoration: none;
+}
+@media (min-width: 768px) {
+    .descripcion {
+        max-width: 780px;
+        margin-left:20vw
+    }
+}
