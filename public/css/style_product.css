@@ -169,16 +169,7 @@ table, tr, td {
     text-align: left;
 }
 
-footer {
-    background-color: #de2e30;
-    border-top: solid 3px #000;
-    margin-top: 1em;
-}
 
-.footer_info a{
-    color: #fff;
-    text-decoration: none;
-}
 @media (min-width: 768px) {
     .descripcion {
         max-width: 780px;
