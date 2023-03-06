@@ -1,1 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+footer {
+    background-color: #de2e30;
+    border-top: solid 3px #000;
+    margin-top: 1em;
+}
+
+.footer_info a{
+    color: #fff;
+    text-decoration: none;
+}
