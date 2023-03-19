@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs')  %>
+<body>
+    <%- include('partials/header.ejs')  %>
+    <main>
+        <form action="login.html" method="get">
+            <div id="Formulario">
+                <h1>Inicio de sesión</h1>
+                <br>
+                <div>
+                    <label for="Usuario"> Nombre de usuario: </label>
+                    <br>
+                    <input type="text" name="Usuario" placeholder="Escriba aquí su nombre de usuario" id="Input" required>
+                </div>
+                <br>
+                <div>
+                    <label for="Contraseña"> Contraseña: </label>
+                    <br>
+                    <input type="password" name="Contraseña" placeholder="Escriba aquí su contraseña" id="Input" required>
+                </div>
+                <div class="Botones">
+                    <input type="reset" value="Borrar todo" id="Botones">
+                    <input type="submit" value="Enviar" id="Botones">
+                </div>
+            </div>
+        </form>
+    </main>
+    <%- include('partials/footer.ejs')  %>
+</body>
+</html>
