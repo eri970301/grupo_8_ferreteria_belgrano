@@ -5,8 +5,9 @@ const controller = {
         const products = JSON.parse(fs.readFileSync(productsFilePath,"utf-8"));
         return res.render('index', {products})
     }
-}
-
+  
+    
+};
 const productsFilePath = path.join(__dirname,"../dataBase/products.json");
 
 

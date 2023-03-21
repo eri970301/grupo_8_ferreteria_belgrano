@@ -1,7 +1,11 @@
-let express = require('express');
+ let express = require('express');
 let router = express.Router();
 const usersController = require('../controllers/usersController')
 
-router.get('/', usersController.login);
+router.get('/login', usersController.login);   
+//ruta de tipo get /usuarios/registro
+router.get('/register', usersController.registro);  
 
-module.exports = router
+
+
+module.exports = router 

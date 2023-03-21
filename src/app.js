@@ -12,10 +12,8 @@ app.set('view engine', 'ejs');
 app.use('/', rutaMain)
 app.use('/login', rutaUsers)
 app.use('/products', rutaProducts);
+app.use('/usuarios', rutaUsers)
 
-app.get("/registro", function(req, res){
-    res.sendFile(path.resolve(__dirname,"./views/register.html"))
-});
 app.get("/producto", function(req, res){
     res.sendFile(path.resolve(__dirname,"./views/product.html"))
 });
