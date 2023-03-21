@@ -41,7 +41,11 @@ body {
     font-size: 16px;
     color: var(--second-color);
 }
+.recomended_products_title{
+    text-align: center;
+}
 .product_recomended{
+    display: flex;
     margin: 20px;
 }
 .product_recomended h2{
@@ -50,6 +54,9 @@ body {
 }
 .product_link_title{
     display: none;
+}
+.product_carousel{
+    margin: 10px;
 }
 .product_carousel_card img{
     width: 100%;
