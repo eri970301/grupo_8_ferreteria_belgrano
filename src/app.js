@@ -9,10 +9,14 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');
 
 app.use('/', rutaMain)
-app.use('/login', rutaUsers)
-app.get("/registro", function(req, res){
-    res.sendFile(path.resolve(__dirname,"./views/register.html"))
-});
+app.use('/usuarios', rutaUsers)
+/* app.use('/register', rutaUsers)  */
+
+/*  app.use('/register', rutaUsers)  */
+
+/*  app.get("/registro", function(req, res){
+    res.sendFile(path.resolve(__dirname,"./views/register.ejs"))
+}); */  
 app.get("/producto", function(req, res){
     res.sendFile(path.resolve(__dirname,"./views/product.html"))
 });
