@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <%- include('partials/header.ejs') %>
+           <h1>Todos los Productos</h1>
+                <!---Sección productos recomendados-->
+                <div class="recomended_products_title">
+                    <h2>Productos recomendados</h2><a href="http://" class="product_link_title">Ver más</a>
+                </div>
+                <section class="product_recomended">
+                    <% products.forEach(product => { %>
+                        <article class="product_carousel">
+                          <div class="product_carousel_card">
+                            <img src="<%= product.imagen %>">
+                            <h3><%= product.precio %></h3>
+                            <h4><%= product.nombre %></h4>
+                          </div>
+                        </article>
+                      <% }) %>
+                </section>
+            <!---Footer-->
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

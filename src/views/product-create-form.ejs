@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'Formulario de creación'}) %>
+<body>
+	<%- include('partials/header') %>
+
+	<section class="edit_form">
+		<h2>Formulario de creación de productos</h2>
+        <form action="" method="post" enctype="multipart/form-data" class="edit_form_main">
+            <div>
+                <label for="nombre">Nombre del producto</label>
+                <input type="text" name="product-name" placeholder="Ej: Cafetera whirpool" class="edit_form_data">
+            </div>
+            <div>
+                <label for="precio">Precio del producto</label>
+                <input type="number" name="product-price" placeholder="Ej: 380" class="edit_form_data">
+            </div>
+			<div>
+                <label for="descuento">Descuento</label>
+                <input type="number" name="product-discount" placeholder="Ej: 30" class="edit_form_data">
+            </div>
+			<div class="edit_form_category">
+				<label for="categoria" >Categoría:</label>
+				<select name="product-category">
+					<option value="">Elegí</option>
+					<option value="in-sale">En oferta</option>
+					<option value="visited">Últimos agregados</option>
+				</select>
+			</div>
+			<div >
+				<label for="imagen">Imagen de producto</label>
+				<input type="file" id="productImage" name="product-image">
+			</div>
+            <div>
+                <label for="usuario">Descripción</label>
+                <textarea name="product-description" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <button class="edit_form_btn">Guardar Producto</button>
+            </div>
+        </form>
+    </section>
+	<%- include('partials/footer') %>
+</body>	
+</html>
