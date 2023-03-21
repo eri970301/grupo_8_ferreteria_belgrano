@@ -1,0 +1,30 @@
+[
+    
+        
+    {
+        "id": 1,
+        "nombre": "Martillo",
+        "precio": 12.99,
+        "imagen": "/img/martillo.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Destornillador",
+        "precio": 6.99,
+        "imagen": "/img/destornillador.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Taladro",
+        "precio": 39.99,
+        "imagen": "/img/taladro.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Alicate",
+        "precio": 12.99,
+        "imagen": "/img/alicate.jpg"
+    }
+
+
+]
