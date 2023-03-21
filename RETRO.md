@@ -23,3 +23,24 @@ Less Of:
 Stop Doing:
 - Zoom
 - Entregar el Sprint a pocos tiempo del deadline
+
+
+Sprint 3
+
+Start Doing:
+- Empezar a apoyarnos mutuamente cuando tenemos dificultades
+
+More Of:
+- Uso de Trello
+- Reuniones grupales
+
+Keep Doing:
+- Reuniones semanales
+- Comunicación oportuna cuando hacemos un push
+
+Less Of:
+- Falta de comunicación
+- Entregar el Sprint a poco tiempo del deadline
+
+Stop Doing:
+- Dejarnos atrasar por los contenidos de playground

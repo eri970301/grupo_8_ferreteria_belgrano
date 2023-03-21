@@ -1,126 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head.ejs')  %>
+<%- include('partials/head.ejs') %>
 
-<body>
-    <%- include('partials/header.ejs')  %>
-    <main>
-        <!---Sección banner-->
-        <section class="main_banner">
-            <img src="/img/banner.jpg" alt="" width="100%">
-        </section>
-        <!---Sección medios de pago-->
-        <section class="payment">
-            <div class="payment_tabs_tab">
-                <div>
-                    <i class="fa-solid fa-money-check-dollar"></i>
+    <body>
+        <%- include('partials/header.ejs') %>
+            <main>
+                <!---Sección banner-->
+                <section class="main_banner">
+                    <img src="/img/banner.jpg" alt="" width="100%">
+                </section>
+                <!---Sección medios de pago-->
+                <section class="payment">
+                    <div class="payment_tabs_tab">
+                        <div>
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </div>
+                        <div>
+                            <h3>Pagá en cuotas</h3>
+                            <a href="http://">Ver promociones bancarias</a>
+                        </div>
+                    </div>
+                    <div class="payment_tabs_tab">
+                        <div>
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <div>
+                            <h3>Tarjeta de débito</h3>
+                            <a href="http://">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="payment_tabs_tab">
+                        <div>
+                            <i class="fa-solid fa-money-bill"></i>
+                        </div>
+                        <div>
+                            <h3>Efectivo</h3>
+                            <a href="http://">Ver más</a>
+                        </div>
+                    </div>
+                    <div class="payment_tabs_tab">
+                        <div>
+                            <i class="fa-solid fa-cash-register"></i>
+                        </div>
+                        <div>
+                            <h3>Más medios de pago</h3>
+                            <a href="http://">Ver más</a>
+                        </div>
+                    </div>
+                </section>
+                <!---Sección productos recomendados-->
+                <div class="recomended_products_title">
+                    <h2>Productos recomendados</h2><a href="http://" class="product_link_title">Ver más</a>
                 </div>
-                <div>
-                    <h3>Pagá en cuotas</h3>
-                    <a href="http://">Ver promociones bancarias</a>
-                </div>
-            </div>
-            <div class="payment_tabs_tab">
-                <div>
-                    <i class="fa-solid fa-credit-card"></i>
-                </div>
-                <div>
-                    <h3>Tarjeta de débito</h3>
-                    <a href="http://">Ver más</a>
-                </div>
-            </div>
-            <div class="payment_tabs_tab">
-                <div>
-                    <i class="fa-solid fa-money-bill"></i>
-                </div>
-                <div>
-                    <h3>Efectivo</h3>
-                    <a href="http://">Ver más</a>
-                </div>
-            </div>
-            <div class="payment_tabs_tab">
-                <div>
-                    <i class="fa-solid fa-cash-register"></i>
-                </div>
-                <div>
-                    <h3>Más medios de pago</h3>
-                    <a href="http://">Ver más</a>
-                </div>
-            </div>
-        </section>
-        <!---Sección productos recomendados-->
-        <section class="product_recomended">
-            <div>
-                <h2>Productos recomendados</h2><a href="http://" class="product_link_title">Ver más</a>
-            </div>
-            <article class="product_carousel">
-                <div class="product_carousel_card"><img src="/img/alicate.jpg" alt="">
-                    <h3>$ Precio</h3>
-                    <h4>Nombre del producto</h4>
-                </div>
-                <div class="product_carousel_card"><img src="/img/destornillador.jpg" alt="">
-                    <h3>$ Precio</h3>
-                    <h4>Nombre del producto</h4>
-                </div>
-                <div class="product_carousel_card"><img src="/img/martillo.jpg" alt="">
-                    <h3>$ Precio</h3>
-                    <h4>Nombre del producto</h4>
-                </div>
-                <div class="product_carousel_card"><img src="/img/taladro.jpg" alt="">
-                    <h3>$ Precio</h3>
-                    <h4>Nombre del producto</h4>
-                </div>
-            </article>
-        </section>
-        <!---Sección Categorías-->
-        <section class="category">
-            <div class="category_title">
-                <h2>Encontrá el producto que buscás</h2>
-                <a href="http://">Ver todas las categorías</a>
-            </div>
-            <article class="category_cards">
-                <div class="category_card">
-                    <a href="http://">
-                        <img src="/img/electrodomesticos.jpg" alt="">
-                        <p>Electrodomésticos</p>
-                    </a>
-                </div>
-                <div class="category_card">
-                    <a href="http://">
-                        <img src="/img/herramientas.jpg" alt="">
-                        <p>Herramientas</p>
-                    </a>
-                </div>
-                <div class="category_card">
-                    <a href="http://"> <img src="/img/industrial.jpg" alt="">
-                        <p>Industrial</p>
-                    </a>
-                </div>
-                <div class="category_card">
-                    <a href="http://">
-                        <img src="/img/jardineria.jpg" alt="">
-                        <p>Jardinería</p>
-                    </a>
+                <section class="product_recomended">
+                    <% products.forEach(product => { %>
+                        <article class="product_carousel">
+                          <div class="product_carousel_card">
+                            <img src="<%= product.imagen %>">
+                            <h3><%= product.precio %></h3>
+                            <h4><%= product.nombre %></h4>
+                          </div>
+                        </article>
+                      <% }) %>
+                </section>
+                <!---Sección Categorías-->
+                <section class="category">
+                    <div class="category_title">
+                        <h2>Encontrá el producto que buscás</h2>
+                        <a href="http://">Ver todas las categorías</a>
+                    </div>
+                    <article class="category_cards">
+                        <div class="category_card">
+                            <a href="http://">
+                                <img src="/img/electrodomesticos.jpg" alt="">
+                                <p>Electrodomésticos</p>
+                            </a>
+                        </div>
+                        <div class="category_card">
+                            <a href="http://">
+                                <img src="/img/herramientas.jpg" alt="">
+                                <p>Herramientas</p>
+                            </a>
+                        </div>
+                        <div class="category_card">
+                            <a href="http://"> <img src="/img/industrial.jpg" alt="">
+                                <p>Industrial</p>
+                            </a>
+                        </div>
+                        <div class="category_card">
+                            <a href="http://">
+                                <img src="/img/jardineria.jpg" alt="">
+                                <p>Jardinería</p>
+                            </a>
 
-                </div>
-                <div class="category_card">
-                    <a href="http://">
-                        <img src="/img/proteccion.jpg" alt="">
-                        <p>Elementos de protección</p>
-                    </a>
+                        </div>
+                        <div class="category_card">
+                            <a href="http://">
+                                <img src="/img/proteccion.jpg" alt="">
+                                <p>Elementos de protección</p>
+                            </a>
 
-                </div>
-            </article>
-        </section>
-        <section class="carousel_footer">
-            <i class="fa-solid fa-store"></i>
-            <h3>Elegí los productos que vas a comprar.</h3>
-            <p>Si querés más de uno, sumalos a tu carrito</p>
-        </section>
-    </main>
-    <!---Footer-->
-    <%- include('partials/footer.ejs')  %>
-</body>
+                        </div>
+                    </article>
+                </section>
+                <section class="carousel_footer">
+                    <i class="fa-solid fa-store"></i>
+                    <h3>Elegí los productos que vas a comprar.</h3>
+                    <p>Si querés más de uno, sumalos a tu carrito</p>
+                </section>
+            </main>
+            <!---Footer-->
+            <%- include('partials/footer.ejs') %>
+    </body>
 
 </html>
