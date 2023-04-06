@@ -1,0 +1,34 @@
+[
+    
+        
+    {
+        "id": 1,
+        "nombre": "Nicolas",
+        "apellido": "Sanchez",
+        "puesto":"Ingeniero Electromecanico",
+        "imagen": "/img/NicolasSanchez1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Matias",
+        "apellido": "Martin",
+        "puesto":"Ingeniero en Sistemas",
+        "imagen": "/img/Matias.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Sofia",
+        "apellido": "Parejas",
+        "puesto":"Lic. Administración",
+        "imagen": "/img/Atina.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Atina",
+        "apellido": "Pagani",
+        "puesto":"Lic. Administración",
+        "imagen": "/img/Atina.jpg"
+    }
+
+
+]

@@ -4,6 +4,7 @@ const path = require('path');
 const rutaUsers = require('./routes/users');
 const rutaMain = require('./routes/main');
 const rutaProducts = require('./routes/products');
+const users = require('./controllers/usersController');
 
 app.use(express.static(path.resolve(__dirname, '../public')))
 app.set('views', path.join(__dirname, 'views'))
@@ -13,10 +14,13 @@ app.use('/', rutaMain)
 app.use('/login', rutaUsers)
 app.use('/products', rutaProducts);
 app.use('/usuarios', rutaUsers)
+app.use('/personal', rutaUsers)
 
-app.get("/producto", function(req, res){
+/* app.get("/producto", function(req, res){
     res.sendFile(path.resolve(__dirname,"./views/product.html"))
-});
+}); */
+
+
 
 const port = process.env.PORT || 3000;
 
