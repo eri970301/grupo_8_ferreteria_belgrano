@@ -4,25 +4,25 @@
 <body>
 	<%- include('partials/header') %>
 
-	<section class="capturaDatos">
+	<section class="edit_form">
 		<h2>Formulario de edición de productos</h2>
-        <form action="" method="post" enctype="multipart/form-data" class="">
-            <div>
+        <form action="" method="POST" enctype="multipart/form-data" class="edit_form_main">
+            <div class="product_field">
                 <label for="nombre">Nombre del producto</label>
                 <br>
                 <input type="text" name="product-name" placeholder="Ej: Cafetera whirpool" class="Datos">
             </div>
-            <div>
+            <div class="product_field">
                 <label for="precio">Precio del producto</label>
                 <br>
                 <input type="number" name="product-price" placeholder="Ej: 380" class="Datos">
             </div>
-			<div>
+			<div class="product_field">
                 <label for="descuento">Descuento</label>
                 <br>
                 <input type="number" name="product-discount" placeholder="Ej: 30" class="Datos">
             </div>
-			<div>
+			<div class="edit_form_category product_field">
 				<label for="categoria">Categoría:</label>
 				<select name="product-category">
 					<option value="">Elegí</option>
@@ -30,17 +30,17 @@
 					<option value="visited">Últimos agregados</option>
 				</select>
 			</div>
-			<div >
+			<div class="second_product_field">
 				<label for="imagen">Imagen de producto</label>
 				<input type="file" id="productImage" name="product-image">
 			</div>
-            <div>
+            <div class="second_product_field">
                 <label for="usuario">Descripción</label>
                 <br>
                 <textarea name="product-description" id="" cols="30" rows="10"></textarea>
 
             </div>
-            <div>
+            <div class="second_product_field">
                 <button class="boton">Guardar Producto</button>
             </div>
         </form>

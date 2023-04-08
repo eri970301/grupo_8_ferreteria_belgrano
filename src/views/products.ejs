@@ -6,7 +6,11 @@
 
     <body>
         <%- include('partials/header.ejs') %>
-           <h1>Todos los Productos</h1>
+        <div class="products_title">
+          <h1>Todos los Productos</h1>
+          <a href="/products/create">Crear Producto</a>
+        </div>
+           
                 <!---Sección productos recomendados-->
                 <div class="recomended_products_title">
                     <h2>Productos recomendados</h2><a href="http://" class="product_link_title">Ver más</a>
@@ -15,13 +19,15 @@
                     <% products.forEach(product => { 
                       let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                       %>
+                      <a href="/">
                         <article class="product_carousel">
                           <div class="product_carousel_card">
-                            <img src="<%= product.image %>">
+                            <img src="/img/<%= product.image %>">
                             <h3><%= finalPrice %></h3>
+                            <p>Descuento: <%= product.discount %>%</p>
                             <h4><%= product.name %></h4>
                           </div>
-                        </article>
+                        </article></a>
                       <% }) %>
                 </section>
             <!---Footer-->

@@ -7,19 +7,19 @@
 	<section class="edit_form">
 		<h2>Formulario de creación de productos</h2>
         <form action="/products" method="POST" enctype="multipart/form-data" class="edit_form_main">
-            <div>
+            <div class="product_field">
                 <label for="nombre">Nombre del producto</label>
                 <input type="text" name="name" placeholder="Ej: Cafetera whirpool" class="edit_form_data">
             </div>
-            <div>
+            <div class="product_field">
                 <label for="precio">Precio del producto</label>
                 <input type="number" name="price" placeholder="Ej: 380" class="edit_form_data">
             </div>
-			<div>
+			<div class="product_field">
                 <label for="descuento">Descuento</label>
                 <input type="number" name="discount" placeholder="Ej: 30" class="edit_form_data">
             </div>
-			<div class="edit_form_category">
+			<div class="edit_form_category product_field">
 				<label for="categoria" >Categoría:</label>
 				<select name="category">
 					<option value="">Elegí</option>
@@ -27,15 +27,15 @@
 					<option value="visited">Últimos agregados</option>
 				</select>
 			</div>
-			<div >
+			<div class="second_product_field">
 				<label for="imagen">Imagen de producto</label>
 				<input type="file" id="productImage" name="productImage">
 			</div>
-            <div>
+            <div class="second_product_field">
                 <label for="description">Descripción</label>
                 <textarea name="description" id="" cols="30" rows="10"></textarea>
             </div>
-            <div>
+            <div class="second_product_field">
                 <button class="edit_form_btn">Guardar Producto</button>
             </div>
         </form>

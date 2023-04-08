@@ -1,6 +1,6 @@
 const path = require("path")
 const fs = require('fs');
-const productsFilePath = path.join(__dirname,"../dataBase/productsprueba.json");
+const productsFilePath = path.join(__dirname,"../dataBase/products.json");
 const controller = {
     // Show all products
     index: (req, res) => {
@@ -26,11 +26,24 @@ const controller = {
         fs.writeFileSync(productsFilePath, productsJSON);
         res.redirect('/products')
     },
-    edit: (req, res) =>{
-        res.render('product-edit-form')
-    },
+    edit: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('product-edit-form', { productToEdit })
+	},
     cart: (req, res)=>{
         res.render('productCart')
+    },
+    delete: (req, res) =>{
+        let id = req.params.id;
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let finalProducts = products.filter(product =>{
+            return product.id != id
+        })
+        let productsJSON = JSON.stringify(finalProducts, null, ' ');
+        fs.writeFileSync(productsFilePath, productsJSON);
+        res.redirect('/products');
     }
 }
 

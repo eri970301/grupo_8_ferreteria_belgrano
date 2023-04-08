@@ -54,14 +54,19 @@
                     <h2>PEDRO MADERAS Y HERRAMIENTAS</h2><a href="http://" class="product_link_title">Ver más</a>
                 </div>
                 <section class="product_recomended">
-                    <% products.forEach(product => { %>
-                        <article class="product_carousel">
-                          <div class="product_carousel_card">
-                            <img src="<%= product.imagen %>">
-                            <h3><%= product.precio %></h3>
-                            <h4><%= product.nombre %></h4>
-                          </div>
-                        </article>
+                    <% products.forEach(product => { 
+                        let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+                        %>
+                        <a href="/">
+                            <article class="product_carousel">
+                                <div class="product_carousel_card">
+                                  <img src="/img/<%= product.image %>">
+                                  <h3><%= finalPrice%></h3>
+                                  <p>Descuento: <%= product.discount %>%</p>
+                                  <h4><%= product.name %></h4>
+                                </div>
+                              </article>
+                        </a>
                       <% }) %>
                 </section>
                 <!---Sección Categorías-->

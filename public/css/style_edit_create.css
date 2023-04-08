@@ -10,6 +10,7 @@
 text-align: center;
 padding: 30px;
 display: flex;
+flex-direction: column;
 }
 .edit_form h2{
     margin-top: 30px;
@@ -26,11 +27,12 @@ display: flex;
     width: auto;
 }
 .edit_form input{
-    color: var(--second-accent-color);
+    color: var(--second-color);
     font-size: 15px;
     padding: 10px;
     margin-top: 15px;
     margin: 20px;
+    width: -webkit-fill-available;
 }
 .edit_form textarea{
     color: var(--second-accent-color);
@@ -38,22 +40,20 @@ display: flex;
     padding: 10px;
     margin-top: 15px;
     margin: 20px;
+    width: -webkit-fill-available;
 }
 .edit_form_category{
     margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
 }
 .edit_form_category select{
-    color: var(--second-accent-color);
+    color: var(--second-color);
     font-size: 15px;
     padding: 10px;
     margin-top: 15px;
-    margin: 20px;
+    margin: 20px 20px 0px;
     width: auto;
 }
 .edit_form_btn{
-    width: 250px;
     height: 30px;
     border: 2px solid #de2e30;
     color: var(--main-color);
@@ -68,7 +68,15 @@ display: flex;
 
  @media(min-width: 768px) { 
     .edit_form_main{
-        max-width: 1300px;
+        max-width: 700px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .edit_form_main .product_field{
+        width: 50%;
+    }
+    .edit_form_main .second_product_field{
+        width: 100%;
     }
     .edit_form{
         align-items: center;
@@ -87,63 +95,4 @@ display: flex;
         border-color: #de2e30;
         color: red;
     }
-    .top_bar, .bottom_bar{
-        display: flex;
-    }
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 30px 20px
-        
-    }
-    .logo{
-        width: 10%;
-        margin-top: 2%;
-    }
-    .header-content{
-        width: 90%;
-    }
-    .top_bar{
-        justify-content: space-between;
-        margin: 16px;
-        align-items: center;
-    }
-    .top_bar_icons i{
-        font-size: 21px;
-        padding: 7px;
-        border-radius: 50%;
-        border: 2px solid var(--accent-color);
-        margin-left: 10px;
-        color: var(--accent-color);
-    }
-    .top_bar nav ul{
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-right: 4px;
-    }
-    .top_bar nav ul li{
-        color: var(--accent-color);
-    }
-    .top_bar nav ul a{
-        text-decoration-color: var(--accent-color);
-        text-underline-offset: 2px;
-    }
-    .mobile_bar {
-        display: none
-    }
-    .top_bar_search i{
-        color: var(--accent-color);
-        font-size: 21px;
-        border: 2px solid var(--accent-color);
-        border-radius: 0px 40px 40px 0px;
-        padding: 5px;
-    }
-    .top_bar_search input{
-        border: none;
-        padding: 7px;
-        border-radius: 40px 0px 0px 40px
-    };
 }
