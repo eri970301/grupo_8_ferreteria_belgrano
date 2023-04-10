@@ -26,12 +26,9 @@ const controller = {
         fs.writeFileSync(productsFilePath, productsJSON);
         res.redirect('/products')
     },
-    edit: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-		res.render('product-edit-form', { productToEdit })
-	},
+    edit: (req, res) =>{
+        res.render('product-edit-form')
+    },
     cart: (req, res)=>{
         res.render('productCart')
     },
@@ -44,7 +41,18 @@ const controller = {
         let productsJSON = JSON.stringify(finalProducts, null, ' ');
         fs.writeFileSync(productsFilePath, productsJSON);
         res.redirect('/products');
+    },
+    detail: (req,res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+		let id = req.params.id
+		let product = products.find(product => product.id == id)
+
+		res.render('/detail', {
+			product})
     }
+    
 }
 
 module.exports = controller
+

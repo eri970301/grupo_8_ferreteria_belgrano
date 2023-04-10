@@ -9,12 +9,12 @@ main {
     display: flex;
     justify-content: center;
     height: 100vh;
+
 }
 
 
 
 form {
-    background-color: var(--second-accent-color);
     margin: 5%;
     padding: 3%;
     display: flex;
@@ -25,7 +25,6 @@ form {
 
 #Formulario {
     text-align: center;
-    background-color: var(--second-accent-color);
     display: flex;
     flex-direction: column;
     width: 80%;
