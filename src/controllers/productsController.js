@@ -42,16 +42,12 @@ const controller = {
         fs.writeFileSync(productsFilePath, productsJSON);
         res.redirect('/products');
     },
-    detail: (req,res) => {
+    detail: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
-
-		res.render('/detail', {
-			product})
+		res.render('detail', {product})
     }
-    
 }
 
 module.exports = controller
