@@ -6,36 +6,51 @@
     --second-accent-color: #eadede
 }
 .capturaDatos{
-text-align: center;
-display: flex;
-width: 100px;
-margin-left: 25%;
+    margin: 5%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border-radius: 5%;
 
 }
+main{
+    display: flex;
+    justify-content: center;
+ }
 form{
-    margin-top: 55px;
-  background-color: #fff;
-    padding: 40px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-}
-.Datos{
-    width: 650px;
-}
-input .Datos{
     
-    color: #c6c6c6;
-    font-size: 15px;
-    padding: 10px;
-    margin-top: 15px;
-    margin: 20px;
+    margin: 5%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    border-radius: 5%;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    background-color: #fff;
 }
+
+#Formulario{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+ }
+
+ label{
+    font-weight: bold;
+    display: flex;
+ }
+
 .boton{
     width: 250px;
     height: 30px;
     color: darkolivegreen;
 }
  @media(min-width: 768px) { 
+    #Button{
+        display: flex;
+        justify-content: center;
+    }
     .boton{
         cursor: pointer;
         text-transform: uppercase;
