@@ -7,6 +7,7 @@ const rutaMain = require('./routes/main');
 const rutaProducts = require('./routes/products');
 const users = require('./controllers/usersController');
 
+app.use(express.urlencoded({ extended : false}));
 app.use(express.static(path.resolve(__dirname, '../public')))
 app.use(methodOverride('_method'));
 app.set('views', path.join(__dirname, 'views'))

@@ -11,43 +11,41 @@
     </header>
 
     <section class="capturaDatos">
-        <form action="" method="post" encty="multipart/form-data" class="">
+        <% if(locals.errors){
+            errors.forEach(error => { %>
+                <p><%= error.msg %></p>
+                <% })
+        } %>
+       
+        <form action="/usuarios/register" method="POST" class="">
             <div>
                 <label for="nombre">Nombre *</label>
-                <br>
-                <input type="text" name="nombre" placeholder="Indique su nombre" class="Datos">
-
+                <input type="text" name="nombre" placeholder="Indique su nombre" class="Datos" value="<%= locals.old && old.nombre ? old.nombre : '' %>">
             </div>
             <div>
                 <label for="apellido">Apellido</label>
-                <br>
-                <input type="text" name="apellido" placeholder="Indique su apellido" class="Datos">
+                <input type="text" name="apellido" placeholder="Indique su apellido" class="Datos" value="<%= locals.old && old.apellido ? old.apellido : '' %>">
 
             </div>
 
             <div>
                 <label for="usuario">Usuario</label>
-                <br>
-                <input type="text" name="usuario" placeholder="Creá tu nombre de usuario" class="Datos">
+                <input type="text" name="usuario" placeholder="Creá tu nombre de usuario" class="Datos" value="<%= locals.old && old.usuario ? old.usuario : '' %>">
 
             </div>
 
             <div>
                 <label for="email">Email</label>
-                <br>
-                <input type="email" name="email" placeholder="Indique su email" class="Datos">
+                <input type="email" name="email" placeholder="Indique su email" class="Datos" value="<%= locals.old && old.email ? old.email : '' %>">
 
             </div>
             <div>
-                <label for="email">Contraseña</label>
-                <br>
-                <input type="password" name="Contraseña" placeholder="Ingresa tu contraseña" class="Datos">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="Datos">
 
             </div>
             <div>
                 <button class="boton">REGISTRARSE</button>
-
-
             </div>
 
 
