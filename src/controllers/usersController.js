@@ -6,7 +6,6 @@ const personaFilePath = path.join(__dirname,"../dataBase/users.json");
 const users = {
     login: (req, res)=> {
         return res.render('login')
-     
 },
     registro: (req, res)=> {
         return res.render('register')
