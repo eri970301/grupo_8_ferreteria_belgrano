@@ -14,12 +14,11 @@
     border-radius: 5%;
 
 }
-main{
+.register_main{
     display: flex;
     justify-content: center;
  }
-form{
-    
+.register_form{
     margin: 5%;
     padding: 3%;
     display: flex;
