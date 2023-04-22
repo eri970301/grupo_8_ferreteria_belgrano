@@ -8,14 +8,14 @@
 .capturaDatos{
 text-align: center;
 display: flex;
-width: 100px;
-margin-left: 25%;
+min-width: 300px;
+justify-content: center;
 
 }
 form{
     margin-top: 55px;
   background-color: #fff;
-    padding: 40px 0;
+    padding: 40px 20px;
     border-radius: 5px;
     box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
 }
