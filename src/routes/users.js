@@ -2,6 +2,7 @@ let express = require('express');
 let router = express.Router();
 const usersController = require('../controllers/usersController')
 const multer = require('multer');
+const path = require('path');
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
