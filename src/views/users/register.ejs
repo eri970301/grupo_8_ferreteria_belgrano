@@ -5,20 +5,27 @@
             <form action="/users/register" method="post" enctype="multipart/form-data" class="register_form">
                 <div id="Formulario">
                     <h1>Formulario de Registro</h1>
+                    <% if(locals.errors){
+                        errors.forEach(error => { %>
+                            <p><%= error.msg %></p>
+                            <% })
+                    } %>
                     <label for="firstName">Nombre *</label>
-                    <input type="text" id="firstName" name="firstName" placeholder="Indique su nombre" class="Datos">
+                    <input type="text" id="firstName" name="firstName" placeholder="Indique su nombre" class="Datos" value="<%= locals.old && old.firstName ? old.firstName : '' %>">
                     <label for="lastName">Apellido</label>
-                    <input type="text" id="lastName" name="lastName" placeholder="Indique su apellido" class="Datos">
+                    <input type="text" id="lastName" name="lastName" placeholder="Indique su apellido" class="Datos" value="<%= locals.old && old.lastName ? old.lastName : '' %>">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Indique su email" class="Datos">
+                    <input type="email" id="email" name="email" placeholder="Indique su email" class="Datos" value="<%= locals.old && old.email ? old.email : '' %>">
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" placeholder="Creá tu nombre de usuario" class="Datos">
                     <div>
                         <label for="role" >Rol:</label>
                         <select name="role">
                             <option value="">Elegí</option>
-                            <option value="admin">Administrador</option>
-                            <option value="customer">Cliente</option>
+                            <% let role = ['Administrador', 'Cliente']; %>
+                            <% for (const oneRole of role){ %>
+                                <option value="<%= oneRole %>" <%= locals.old && old.category == 'oneRole' ? 'selected' : '' %> > <%= oneRole %> </option>
+                            <% } %> 
                         </select>
                     </div>
                     <div>

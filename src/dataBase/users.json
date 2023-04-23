@@ -304,5 +304,14 @@
   "password": "",
   "type": "customer",
   "avatar": "user.jpg"
+ },
+ {
+  "id": 35,
+  "firstName": "",
+  "lastName": "",
+  "email": "",
+  "password": "",
+  "type": "",
+  "avatar": "user.jpg"
  }
 ]
