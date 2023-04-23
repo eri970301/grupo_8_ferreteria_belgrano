@@ -1,0 +1,24 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+                <!---Sección productos recomendados-->
+                <div class="recomended_products_title">
+                    <h2>Personal Ferreteria Belgrano</h2><a href="http://" class="product_link_title">Ver más</a>
+                </div>
+                <section class="product_recomended">
+                    <% users.forEach(user => { %>
+                        <article class="product_carousel">
+                          <div class="product_carousel_card">
+                            <img src="/img/<%= user.avatar %>">
+                            <h3><%= user.firstName %></h3>
+                            <h4><%= user.lastName %></h4>
+                            <h5><%= user.email %></h5>
+                            <h6><%= user.type %></h6>
+                          </div>
+                        </article>
+                      <% }) %>
+                </section>
+            <!---Footer-->
+            <%- include('../partials/footer.ejs') %>
+              </body>
+</html>

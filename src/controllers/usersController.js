@@ -1,15 +1,16 @@
 const path = require("path")
 const fs = require('fs');
 /* const productsFilePath = path.join(__dirname,"../dataBase/products.json"); */
-const personaFilePath = path.join(__dirname, "../dataBase/users.json");
+const usersFilePath = path.join(__dirname, "../dataBase/users.json");
+const productsFilePath = path.join(__dirname, "../dataBase/products.json");
 
 const users = {
     login: (req, res) => {
-        return res.render('login')
+        return res.render('users/login')
 
     },
     registro: (req, res) => {
-        return res.render('register')
+        return res.render('users/register')
     },
     guardarUsuario: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -28,13 +29,13 @@ const users = {
 
         fs.writeFileSync(usersFilePath, usersJSON);
 
-        res.redirect("/register");
+        res.redirect("users/register");
     },
 
 
     personal: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(personaFilePath, "utf-8"));
-        return res.render('personal', { products })
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+        return res.render('users/personal', { users })
     }
 }
 

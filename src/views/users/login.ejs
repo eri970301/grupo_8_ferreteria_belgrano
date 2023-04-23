@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="/css/style_login.css">
-    <%- include('partials/head.ejs')  %>
-    </head>
+<%- include('../partials/head.ejs')  %>
 <body>
-    <%- include('partials/header.ejs')  %>
-    <main>
-        <form action="login.html" method="get">
+    <%- include('../partials/header.ejs')  %>
+    <main class="login_main">
+        <form action="login.html" method="get" class="login_form">
             <div id="Formulario">
                 <h1>Inicio de sesión</h1>
                 <br>
@@ -29,6 +24,6 @@
             </div>
         </form>
     </main>
-    <%- include('partials/footer.ejs')  %>
+    <%- include('../partials/footer.ejs')  %>
 </body>
 </html>
