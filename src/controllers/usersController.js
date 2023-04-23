@@ -22,7 +22,7 @@ const users = {
             email: req.body.email,
             password: req.body.password,
             type: req.body.role,
-            avatar: req.file ? req.file.filename : 'users/user.jpg'
+            avatar: req.file ? req.file.filename : 'user.jpg'
         };
         users.push(usuarioNuevo);
         let usersJSON = JSON.stringify(users, null, " ");

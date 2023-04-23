@@ -295,5 +295,14 @@
   "password": "dsfsfsdg",
   "type": "customer",
   "avatar": "avatar-1682219473422.jpg"
+ },
+ {
+  "id": 34,
+  "firstName": "hola",
+  "lastName": "test",
+  "email": "test@lp.com",
+  "password": "",
+  "type": "customer",
+  "avatar": "user.jpg"
  }
 ]
