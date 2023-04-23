@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style_home.css">
-    <link rel="stylesheet" href="/css/style_header.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style_register.css">
-    <title>Document</title>
-</head>
 <%- include('partials/head.ejs') %>
-
     <body>
         <%- include('partials/header.ejs') %>
             <header>
@@ -24,43 +10,28 @@
                 </div>
             </header>
             <main class="register_main">
-            <form action="/register" method="post" encty="multipart/form-data" class="register_form">
+            <form action="/usuarios/register" method="post" encty="multipart/form-data" class="register_form">
                 <div id="Formulario">
                     <h1>Formulario de Registro</h1>
                     <label for="nombre">Nombre *</label>
                     <br>
                     <input type="text" name="nombre" placeholder="Indique su nombre" class="Datos">
-
-
-
                     <label for="apellido">Apellido</label>
                     <br>
                     <input type="text" name="apellido" placeholder="Indique su apellido" class="Datos">
-
-
-
-
                     <label for="usuario">Usuario</label>
                     <br>
                     <input type="text" name="usuario" placeholder="Creá tu nombre de usuario" class="Datos">
-
-
                     <label for="email">Email</label>
                     <br>
                     <input type="email" name="email" placeholder="Indique su email" class="Datos">
                     <br>
-
                     <div id="Button">
                     <button class="boton">REGISTRARSE</button>
                     </div>
-
-
-
-
                 </div>
             </form>
         </main>
-
             <%- include('partials/footer.ejs') %>
                 <h3>efasdfsafs</h3>
     </body>
