@@ -2,20 +2,20 @@
 <body>
     <%- include('../partials/header.ejs')  %>
     <main class="login_main">
-        <form action="login.html" method="get" class="login_form">
+        <form action="/users/login" method="POST" class="login_form">
             <div id="Formulario">
                 <h1>Inicio de sesión</h1>
                 <br>
                 <div>
-                    <label for="Usuario"> Nombre de usuario: </label>
+                    <label for="email"> Email: </label>
                     <br>
-                    <input type="text" name="Usuario" placeholder="Escriba aquí su nombre de usuario" id="Input" required>
+                    <input type="email" name="email" placeholder="Escriba aquí su email" id="Input" required>
                 </div>
                 <br>
                 <div>
-                    <label for="Contraseña"> Contraseña: </label>
+                    <label for="password"> Contraseña: </label>
                     <br>
-                    <input type="password" name="Contraseña" placeholder="Escriba aquí su contraseña" id="Input" required>
+                    <input type="password" name="password" placeholder="Escriba aquí su contraseña" id="Input" required>
                 </div>
                 <div class="Botones">
                     <input type="reset" value="Borrar todo" id="Botones">

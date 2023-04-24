@@ -20,11 +20,11 @@ const validations = [
     body('lastName').notEmpty().withMessage('Ingresa un apellido valido'),
     body('email').isEmail().withMessage('Ingresa un email valido'),
     body('password').notEmpty().withMessage('Ingresa una contraseña'),
-    body('role').notEmpty().withMessage('Ingresa un rol'),
-    body('avatar').notEmpty().withMessage('Ingresa una imagen')
+    body('role').notEmpty().withMessage('Ingresa un rol')
 ]
 
-router.get('/login', usersController.login);   
+router.get('/login', usersController.login);
+router.post('/login', usersController.processLogin);     
 //ruta de tipo get /users/registro
 router.get('/register', usersController.registro);
 router.post('/register', upload.single('avatar'), validations, usersController.guardarUsuario)  

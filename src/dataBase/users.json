@@ -313,5 +313,23 @@
   "password": "",
   "type": "",
   "avatar": "user.jpg"
+ },
+ {
+  "id": 36,
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test@lp.com",
+  "password": "$2a$10$r1s53GBCoHgrMLsQ9NDiMeeUO5QzxqEVk9reTTQbTNfR/.bDasKee",
+  "type": "Administrador",
+  "avatar": "avatar-1682302603315.jpg"
+ },
+ {
+  "id": 37,
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test@lp.com",
+  "password": "$2a$10$Y7ImU23cy5oG8D1XlfXJy.3SiJlL2Gx7YtAOmVcK.7VGOTPTvRqjy",
+  "type": "Administrador",
+  "avatar": "avatar-1682302609935.jpg"
  }
 ]
