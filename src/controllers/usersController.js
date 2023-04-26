@@ -24,6 +24,13 @@ const users = {
         }
         res.send('error')
     },
+    recordame: (req,res) => {
+        if (req.body.recordame !=undefined) {
+            res.cookie('recordame')
+            
+        }
+
+    },
     registro: (req, res) => {
         return res.render('users/register')
     },

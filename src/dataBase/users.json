@@ -331,5 +331,14 @@
   "password": "$2a$10$Y7ImU23cy5oG8D1XlfXJy.3SiJlL2Gx7YtAOmVcK.7VGOTPTvRqjy",
   "type": "Administrador",
   "avatar": "avatar-1682302609935.jpg"
+ },
+ {
+  "id": 38,
+  "firstName": "ssdvbcdsacbsa",
+  "lastName": "fgfdagasfgdsag",
+  "email": "Borja@gmail.com",
+  "password": "$2a$10$L7V8WrttNcGnC1S/rBeCBehQV./lDlraUZ.OzygNybqwm9qDyo0jO",
+  "type": "Cliente",
+  "avatar": "user.jpg"
  }
 ]

@@ -1,29 +1,36 @@
-<%- include('../partials/head.ejs')  %>
-<body>
-    <%- include('../partials/header.ejs')  %>
-    <main class="login_main">
-        <form action="/users/login" method="POST" class="login_form">
-            <div id="Formulario">
-                <h1>Inicio de sesión</h1>
-                <br>
-                <div>
-                    <label for="email"> Email: </label>
-                    <br>
-                    <input type="email" name="email" placeholder="Escriba aquí su email" id="Input" required>
-                </div>
-                <br>
-                <div>
-                    <label for="password"> Contraseña: </label>
-                    <br>
-                    <input type="password" name="password" placeholder="Escriba aquí su contraseña" id="Input" required>
-                </div>
-                <div class="Botones">
-                    <input type="reset" value="Borrar todo" id="Botones">
-                    <input type="submit" value="Enviar" id="Botones">
-                </div>
-            </div>
-        </form>
-    </main>
-    <%- include('../partials/footer.ejs')  %>
-</body>
-</html>
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+            <main class="login_main">
+                <form action="/users/login" method="POST" class="login_form">
+                    <div id="Formulario">
+                        <h1>Inicio de sesión</h1>
+                        <br>
+                        <div>
+                            <label for="email"> Email: </label>
+                            <br>
+                            <input type="email" name="email" placeholder="Escriba aquí su email" id="Input" required>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="password"> Contraseña: </label>
+                            <br>
+                            <input type="password" name="password" placeholder="Escriba aquí su contraseña" id="Input"
+                                required>
+                        </div>
+                        <div id="rememberMe">
+                            <label for="rememberMe"> Recordame </label>
+                            <input type="checkbox" name="rememberMe" id="checkbox">
+                        </div>
+                        <div class="Botones">
+                            <input type="reset" value="Borrar todo" id="Botones">
+                            <input type="submit" value="Enviar" id="Botones">
+                        </div>
+                    </div>
+                </form>
+            </main>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+    </html>
