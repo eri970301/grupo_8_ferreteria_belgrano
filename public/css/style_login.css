@@ -5,16 +5,24 @@
     --second-accent-color: #eadede
 }
 
+<<<<<<< HEAD
 main {
+=======
+.login_main {
+>>>>>>> 8f8b074 (Programa con errores)
     display: flex;
     justify-content: center;
     height: 100vh;
 }
 
+<<<<<<< HEAD
 
 
 form {
     background-color: var(--second-accent-color);
+=======
+.login_form {
+>>>>>>> 8f8b074 (Programa con errores)
     margin: 5%;
     padding: 3%;
     display: flex;
@@ -41,6 +49,14 @@ label {
 #Input {
     height: 30px;
     width: 100%;
+}
+
+#rememberMe {
+    display: flex;
+}
+
+#checkbox {
+    margin: 5px;
 }
 
 .Botones {

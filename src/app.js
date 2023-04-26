@@ -3,8 +3,21 @@ const app = express();
 const path = require('path');
 const rutaUsers = require('./routes/users');
 const rutaMain = require('./routes/main');
+<<<<<<< HEAD
 
 app.use(express.static(path.resolve(__dirname, '../public')))
+=======
+const rutaProducts = require('./routes/products');
+const { cookie } = require('express-validator');
+const cookieParser= require('cookie-parser');
+const session= require('express-session');
+
+app.use(express.static(path.resolve(__dirname, '../public')))
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }))
+app.use(session)
+app.use(cookieParser())
+>>>>>>> 8f8b074 (Programa con errores)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs');
 
