@@ -12,31 +12,28 @@ const users = {
     processLogin: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
         let usuarios;
-        if(users == ''){
+        if (users == '') {
             usuarios = [];
-        }else{
+        } else {
             usuarios = users
         }
         /* inicio de seccion */
-        for(let i = 0; i < usuarios.length; i++){
+        for (let i = 0; i < usuarios.length; i++) {
             if (req.body.email == usuarios[i].email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-<<<<<<< HEAD
                 return res.render('users/Admi', { users })
-=======
                 res.cookie('recordame', usuarios[i].email, { maxAge: 60000 });
                 res.send('Holaaa usuario');
->>>>>>> fef9cbca0d368abc83b415b9f2de7bf621bfe8c8
             }
         }
         return res.render('users/register')
     },
     registro: (req, res) => {
-        return res.render('/')
+        return res.render('users/register')
     },
     guardarUsuario: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
         const errors = validationResult(req);
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
             let usuarioNuevo = {
                 id: users[users.length - 1].id + 1,
                 firstName: req.body.firstName,
@@ -51,7 +48,8 @@ const users = {
             fs.writeFileSync(usersFilePath, usersJSON);
             res.redirect("personal");
         } else {
-            res.render('users/register', {errors:errors.array(),
+            res.render('users/register', {
+                errors: errors.array(),
                 old: req.body
             })
         }
@@ -62,28 +60,28 @@ const users = {
     },
 
     Eliminar: (req, res) => {
-     let id = req.params.id;
+        let id = req.params.id;
 
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-       
+
         const usuario = users.find(user => {
             return users.id == id
         })
-        console.log(usuario) 
+        console.log(usuario)
         res.send('FALTA TERMINAR ')
 
 
-   
+
     },
-    detail: (req,res) => {
+    detail: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
+        let id = req.params.id
+        let product = products.find(product => product.id == id)
 
-		res.render('detail', {users})
+        res.render('detail', { users })
     }
-    
+
 }
 
 module.exports = users
