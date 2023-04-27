@@ -19,17 +19,11 @@ const users = {
         }
         for(let i = 0; i < usuarios.length; i++){
             if (req.body.email == usuarios[i].email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
+                res.cookie('recordame', usuarios[i].email, { maxAge: 60000 });
                 res.send('Holaaa usuario');
             }
         }
         res.send('error')
-    },
-    recordame: (req,res) => {
-        if (req.body.recordame !=undefined) {
-            res.cookie('recordame')
-            
-        }
-
     },
     registro: (req, res) => {
         return res.render('users/register')
