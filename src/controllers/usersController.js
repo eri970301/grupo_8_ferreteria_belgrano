@@ -17,15 +17,16 @@ const users = {
         }else{
             usuarios = users
         }
+        /* inicio de seccion */
         for(let i = 0; i < usuarios.length; i++){
             if (req.body.email == usuarios[i].email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-                res.send('Holaaa usuario');
+                return res.render('users/Admi', { users })
             }
         }
-        res.send('error')
+        return res.render('users/register')
     },
     registro: (req, res) => {
-        return res.render('users/register')
+        return res.render('/')
     },
     guardarUsuario: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -53,7 +54,31 @@ const users = {
     personal: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
         return res.render('users/personal', { users })
+    },
+
+    Eliminar: (req, res) => {
+     let id = req.params.id;
+
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+       
+        const usuario = users.find(user => {
+            return users.id == id
+        })
+        console.log(usuario) 
+        res.send('FALTA TERMINAR ')
+
+
+   
+    },
+    detail: (req,res) => {
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+
+		let id = req.params.id
+		let product = products.find(product => product.id == id)
+
+		res.render('detail', {users})
     }
+    
 }
 
 module.exports = users

@@ -6,6 +6,9 @@
                 <div class="recomended_products_title">
                     <h2>Personal Ferreteria Belgrano</h2><a href="http://" class="product_link_title">Ver más</a>
                 </div>
+
+                
+                <a href="/users/person<%= users.id %>">
                 <section class="product_recomended">
                     <% users.forEach(user => { %>
                         <article class="product_carousel">
@@ -19,8 +22,9 @@
                         </article>
                       <% }) %>
                 </section>
-                
-          
+              </a>
+                  
+              
             <!---Footer-->
             <%- include('../partials/footer.ejs') %>
               </body>

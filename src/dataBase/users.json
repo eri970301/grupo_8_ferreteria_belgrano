@@ -331,5 +331,14 @@
   "password": "$2a$10$Y7ImU23cy5oG8D1XlfXJy.3SiJlL2Gx7YtAOmVcK.7VGOTPTvRqjy",
   "type": "Administrador",
   "avatar": "avatar-1682302609935.jpg"
+ },
+ {
+  "id": 38,
+  "firstName": "PRUEBA",
+  "lastName": "PRUEBA",
+  "email": "PRUEBA@PRUEBA.COM",
+  "password": "$2a$10$arhKrNduKbJ6RG03tdX9OOvhSx2..Oci87XSB942ZVVmL6etXCxV2",
+  "type": "Administrador",
+  "avatar": "user.jpg"
  }
 ]
