@@ -5,12 +5,13 @@
     --second-accent-color: #eadede
 }
 
-.login_main{
+.login_main {
     display: flex;
     justify-content: center;
     height: 100vh;
 
 }
+
 .login_form {
     margin: 5%;
     padding: 3%;
@@ -37,6 +38,14 @@ label {
 #Input {
     height: 30px;
     width: 100%;
+}
+
+#rememberMe {
+    display: flex;
+}
+
+#checkbox {
+    margin: 5px;
 }
 
 .Botones {

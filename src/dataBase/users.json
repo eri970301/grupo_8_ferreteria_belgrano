@@ -334,11 +334,19 @@
  },
  {
   "id": 38,
+<<<<<<< HEAD
   "firstName": "PRUEBA",
   "lastName": "PRUEBA",
   "email": "PRUEBA@PRUEBA.COM",
   "password": "$2a$10$arhKrNduKbJ6RG03tdX9OOvhSx2..Oci87XSB942ZVVmL6etXCxV2",
   "type": "Administrador",
+=======
+  "firstName": "ssdvbcdsacbsa",
+  "lastName": "fgfdagasfgdsag",
+  "email": "Borja@gmail.com",
+  "password": "$2a$10$ghiRomdEsponZfzFtPEqieS3DcQpF9GoWKj6AAKf31K9gKq6IiKNS",
+  "type": "Cliente",
+>>>>>>> fef9cbca0d368abc83b415b9f2de7bf621bfe8c8
   "avatar": "user.jpg"
  }
 ]
