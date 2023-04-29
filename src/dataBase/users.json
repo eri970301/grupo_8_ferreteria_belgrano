@@ -331,5 +331,23 @@
   "password": "$2a$10$Y7ImU23cy5oG8D1XlfXJy.3SiJlL2Gx7YtAOmVcK.7VGOTPTvRqjy",
   "type": "Administrador",
   "avatar": "avatar-1682302609935.jpg"
+ },
+ {
+  "id": 38,
+  "firstName": "test",
+  "lastName": "test",
+  "email": "test@lp.com",
+  "password": "$2a$10$5Js9S3d1HZ4U0VF/gEuNUeIaj.85235kIDXl0V4uR8TESaUDicLjW",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 39,
+  "firstName": "test",
+  "lastName": "test",
+  "email": "tfarebrothers@devhub.com",
+  "password": "$2a$10$Ca2rfALHsSKJOBgFN6DpnOesFHjoOZa4lWvTrCUf2EVASxVkOcGUW",
+  "type": "Administrador",
+  "avatar": "user.jpg"
  }
 ]

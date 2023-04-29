@@ -36,7 +36,7 @@ const users = {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.password),
+                password: bcrypt.hashSync(req.body.password, 10),
                 type: req.body.role,
                 avatar: req.file ? req.file.filename : 'user.jpg'
             };

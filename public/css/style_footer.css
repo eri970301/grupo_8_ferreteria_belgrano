@@ -1,11 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-:root{
-    --main-color: #de2e30;
-    --second-color: #000;
-    --accent-color: #fff;
-    --second-accent-color: #eadede
-} 
-
 footer {
     background-color: #de2e30;
     border-top: solid 3px #000;
