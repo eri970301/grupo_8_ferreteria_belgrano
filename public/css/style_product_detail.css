@@ -1,0 +1,19 @@
+.products-title{
+    margin: 30px 10px;
+}
+.product-detail-price{
+    margin-bottom: 30px;
+}
+.product-detail-img{
+    margin-bottom: 30px;
+}
+.buy-now-button{
+    text-decoration: none;
+}
+.products-wrapper{
+    margin: 15px;
+    max-width: 1440px;
+}
+.products-wrapper .payment{
+    padding-left: 0;
+}

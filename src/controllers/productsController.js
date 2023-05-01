@@ -27,7 +27,32 @@ const controller = {
         res.redirect('/products')
     },
     edit: (req, res) => {
-        res.render('product-edit-form')
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        let id = req.params.id;
+        let productToEdit = products.find(product => product.id == id);
+        res.render('product-edit-form', {productToEdit})
+    },
+    update: (req, res) =>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+        let id = req.params.id;
+        let productWithoutEdit = products.find(product => product.id == id);
+        let productoEditado = {
+            id: id, 
+            name: req.body.name,
+			price: parseInt(req.body.price),
+			discount: parseInt(req.body.discount),
+			category: req.body.category,
+			description: req.body.description,
+			image: req.file ? req.file.filename : productWithoutEdit.image
+        };
+        let index = products.findIndex(product =>{
+            return product.id == id
+        });
+        console.log(productoEditado)
+        products[index] = productoEditado;
+        let productsJSON = JSON.stringify(products, null, '');
+        fs.writeFileSync(productsFilePath, productsJSON);
+        res.redirect('/products')
     },
     cart: (req, res) => {
         res.render('productCart')
@@ -44,10 +69,8 @@ const controller = {
     },
     detail: (req,res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
-
 		res.render('detail', {product})
     }
 }

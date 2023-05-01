@@ -7,10 +7,11 @@
     --second-accent-color: #eadede
 }
 h1, h2, h3, h4, h5, h6{
-    font-weight: 400;
+    font-weight: bold;
 }
 body {
-    background: #eadede
+    background: #eadede;
+    font-weight: 600;
 }
 
 .payment {

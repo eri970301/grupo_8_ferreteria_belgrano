@@ -1,17 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-:root{
-    --main-color:#de2e30;
-    --second-color: #000;
-    --accent-color: #fff;
-    --second-accent-color: #eadede
-}
-
-body{
-    background: #eadede
-
-
-}
-
 .seleccionado{
     padding: 10px;
     text-align: left;

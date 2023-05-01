@@ -4,6 +4,7 @@
     --accent-color: #fff;
     --second-accent-color: #eadede
 }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 .login_main {
     display: flex;
