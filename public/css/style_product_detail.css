@@ -17,3 +17,38 @@
 .products-wrapper .payment{
     padding-left: 0;
 }
+.detail_button{
+    padding: 20px 30px;
+    margin: 30px;
+    background-color: #de2e30;
+    border-radius: 10px;
+    border:none;
+    transition: .5s all ease;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    min-width: 230px;
+}
+.detail_button:hover{
+    background-color: transparent;
+    border: 2px solid #de2e30;
+    color: #de2e30;
+}
+.products_title_mobile{
+    display: block
+}
+.products_title_desktop{
+    display: none
+}
+@media (min-width: 768px) {
+    .products_title_mobile{
+        display: none
+    }
+    .products_title_desktop{
+        display: block
+    }
+    .product-detail-img{
+        margin-top: 30px;
+    }
+}
