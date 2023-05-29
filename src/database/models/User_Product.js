@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
                 autoIncrement: true
             },
             product_id: {
-                type:dataTypes.VARCHAR(50)
+                type:dataTypes.STRING(50)
             },
             user_id: {
                 type: dataTypes.TEXT(500)

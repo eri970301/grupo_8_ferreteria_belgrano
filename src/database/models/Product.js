@@ -7,19 +7,19 @@ module.exports = (sequelize, dataTypes) => {
                 autoIncrement: true
             },
             name: {
-                type:dataTypes.VARCHAR(50)
+                type:dataTypes.STRING(50)
             },
             description: {
                 type: dataTypes.TEXT(500)
             },
             image: {
-                type: dataTypes.VARCHAR(200)
+                type: dataTypes.STRING(200)
             },
             category: {
-                type: dataTypes.VARCHAR(200)
+                type: dataTypes.STRING(200)
             },
             productType: {
-                type: dataTypes.VARCHAR(200)
+                type: dataTypes.STRING(200)
             },
             price: {
                 type: dataTypes.DECIMAL(9)

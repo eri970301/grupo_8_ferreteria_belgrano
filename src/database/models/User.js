@@ -7,22 +7,22 @@ module.exports = (sequelize, dataTypes) => {
                 autoIncrement: true
             },
             firstName: {
-                type:dataTypes.VARCHAR(50)
+                type:dataTypes.STRING(50)
             },
             lastName: {
-                type: dataTypes.VARCHAR(50)
+                type: dataTypes.STRING(50)
             },
             email: {
-                type: dataTypes.VARCHAR(200)
+                type: dataTypes.STRING(200)
             },
             password: {
-                type: dataTypes.VARCHAR(200)
+                type: dataTypes.STRING(200)
             },
             userType: {
-                type: dataTypes.VARCHAR(200)
+                type: dataTypes.STRING(200)
             },
             image: {
-                type: dataTypes.VARCHAR(200)
+                type: dataTypes.STRING(200)
             }
         };
         let config = {
