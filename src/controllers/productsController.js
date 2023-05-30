@@ -6,9 +6,9 @@ const db = require('../database/models');
 const controller = {
     // Show all products
     index: (req, res) => {
-        let products = []
-        db.Product.findAll().then((product)=>{
-            products = products.push(product)
+        db.Products.findAll().then((product)=>{
+            console.log(product)
+            return res.render('products', {products:product})
         })
     },
     create: (req, res) => {
