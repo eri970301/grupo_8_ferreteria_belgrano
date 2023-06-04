@@ -6,22 +6,22 @@
 
 	<section class="edit_form">
 		<h2>Formulario de edición de productos</h2>
-        <p>Estas editando: <%= productToEdit.name %></p>
-        <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="edit_form_main">
+        <p>Estas editando: <%= product.name %></p>
+        <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="edit_form_main">
             <div class="product_field">
                 <label for="nombre">Nombre del producto</label>
                 <br>
-                <input type="text" name="name" placeholder="Ej: Cafetera whirpool" class="Datos" value="<%= productToEdit.name %>">
+                <input type="text" name="name" placeholder="Ej: Cafetera whirpool" class="Datos" value="<%= product.name %>">
             </div>
             <div class="product_field">
                 <label for="precio">Precio del producto</label>
                 <br>
-                <input type="number" name="price" placeholder="Ej: 380" class="Datos" value="<%= productToEdit.price %>">
+                <input type="number" name="price" placeholder="Ej: 380" class="Datos" value="<%= product.price %>">
             </div>
 			<div class="product_field">
                 <label for="descuento">Descuento</label>
                 <br>
-                <input type="number" name="discount" placeholder="Ej: 30" class="Datos" value="<%= productToEdit.discount %>">
+                <input type="number" name="discount" placeholder="Ej: 30" class="Datos" value="<%= product.discount %>">
             </div>
 			<div class="edit_form_category product_field">
 				<label for="categoria">Categoría:</label>
@@ -33,12 +33,12 @@
 			</div>
 			<div class="second_product_field">
 				<label for="imagen">Imagen de producto</label>
-				<input type="file" id="productImage" name="image" value="<%= productToEdit.image %>">
+				<input type="file" id="productImage" name="image" value="<%= product.image %>">
 			</div>
             <div class="second_product_field">
                 <label for="usuario">Descripción</label>
                 <br>
-                <textarea name="description" id="" cols="30" rows="10"><%= productToEdit.description %></textarea>
+                <textarea name="description" id="" cols="30" rows="10"><%= product.description %></textarea>
 
             </div>
             <div class="second_product_field">

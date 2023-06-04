@@ -15,47 +15,38 @@ const controller = {
         res.render('product-create-form')
     },
     store: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        let productoNuevo = {
-            id: products[products.length - 1].id + 1,
+        db.Products.create({
             name: req.body.name,
+            description: req.body.description,
+            image: req.file ? req.file.filename : 'default-image.png',
+            category: req.body.category,
+            type: req.body.type,
             price: parseInt(req.body.price),
             discount: parseInt(req.body.discount),
-            category: req.body.category,
-            description: req.body.description,
-            image: req.file ? req.file.filename : 'default-image.png'
-        };
-        products.push(productoNuevo);
-        let productsJSON = JSON.stringify(products, null, '');
-        fs.writeFileSync(productsFilePath, productsJSON);
+        })
         res.redirect('/products')
     },
     edit: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let id = req.params.id;
-        let productToEdit = products.find(product => product.id == id);
-        res.render('product-edit-form', {productToEdit})
+        db.Products.findByPk(id)
+        .then((product)=>{
+            res.render('product-edit-form', {product: product})
+        })
     },
     update: (req, res) =>{
-        const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-        let id = req.params.id;
-        let productWithoutEdit = products.find(product => product.id == id);
-        let productoEditado = {
-            id: id, 
+        db.Products.update({
             name: req.body.name,
-			price: parseInt(req.body.price),
-			discount: parseInt(req.body.discount),
-			category: req.body.category,
-			description: req.body.description,
-			image: req.file ? req.file.filename : productWithoutEdit.image
-        };
-        let index = products.findIndex(product =>{
-            return product.id == id
-        });
-        console.log(productoEditado)
-        products[index] = productoEditado;
-        let productsJSON = JSON.stringify(products, null, '');
-        fs.writeFileSync(productsFilePath, productsJSON);
+            description: req.body.description,
+            image: req.file ? req.file.filename : 'default-image.png',
+            category: req.body.category,
+            type: req.body.type,
+            price: parseInt(req.body.price),
+            discount: parseInt(req.body.discount),
+        }, {
+            where: {
+                id: req.params.id
+            },
+        })
         res.redirect('/products')
     },
     cart: (req, res) => {

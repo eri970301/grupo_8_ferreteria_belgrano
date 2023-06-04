@@ -23,6 +23,9 @@ module.exports = (sequelize, dataTypes) => {
             },
             price: {
                 type: dataTypes.DECIMAL(9)
+            },
+            discount: {
+                type: dataTypes.DECIMAL(9)
             }
         };
         let config = {
