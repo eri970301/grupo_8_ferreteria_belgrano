@@ -340,5 +340,14 @@
   "password": "$2a$10$SdT5emr6ug0AiUGi2856Wuyo8brifuZ0BcCzP1RZ2hgUj6ukW7kKa",
   "type": "Administrador",
   "avatar": "avatar-1683587892018.png"
+ },
+ {
+  "id": 39,
+  "firstName": "Santiago",
+  "lastName": "Martin",
+  "email": "santiyfidel@gmail.com",
+  "password": "$2a$10$ycyDBhzGFpXfPiN2HpdH1OEKUOE63zyKqzLbjYEQ3qqFrwwAeqGt6",
+  "type": "Administrador",
+  "avatar": "avatar-1685635628595.jpg"
  }
 ]

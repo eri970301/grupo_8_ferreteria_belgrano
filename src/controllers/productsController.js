@@ -6,9 +6,9 @@ const db = require('../database/models');
 const controller = {
     // Show all products
     index: (req, res) => {
-        db.Products.findAll().then((product)=>{
+        db.Products.findAll().then((product) => {
             console.log(product)
-            return res.render('products', {products:product})
+            return res.render('products', { products: product })
         })
     },
     create: (req, res) => {
@@ -29,11 +29,11 @@ const controller = {
     edit: (req, res) => {
         let id = req.params.id;
         db.Products.findByPk(id)
-        .then((product)=>{
-            res.render('product-edit-form', {product: product})
-        })
+            .then((product) => {
+                res.render('product-edit-form', { product: product })
+            })
     },
-    update: (req, res) =>{
+    update: (req, res) => {
         db.Products.update({
             name: req.body.name,
             description: req.body.description,
@@ -54,20 +54,37 @@ const controller = {
     },
     delete: (req, res) => {
         let id = req.params.id;
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        let finalProducts = products.filter(product => {
-            return product.id != id
+
+
+        Product.destroy({
+            where: {
+                id: id
+            }
         })
-        let productsJSON = JSON.stringify(finalProducts, null, ' ');
-        fs.writeFileSync(productsFilePath, productsJSON);
-        res.redirect('/products');
+            .then(() => {
+                res.redirect('/products');
+            })
+            .catch(error => {
+                console.error('Error al eliminar el producto:', error);
+                res.redirect('/products');
+            })
     },
-    detail: (req,res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
-		res.render('detail', {product})
+    detail: (req, res) => {
+        let id = req.params.id;
+        Product.findOne({
+            where: {
+                id: id
+            }
+        })
+            .then(product => {
+                res.render('detail', { product });
+            })
+            .catch(error => {
+                console.error('Error al obtener el detalle del producto:', error);
+                res.redirect('/products');
+            });
     }
+
 }
 
 module.exports = controller
