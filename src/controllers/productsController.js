@@ -11,6 +11,21 @@ const controller = {
             return res.render('products', { products: product })
         })
     },
+    search: (req, res) =>{
+        let productSearch = req.query.query;
+        productSearch.toLowerCase();
+        let productsResults = [];
+        db.Products.findAll()
+        .then((product =>{
+            for(let i=0; i<product.length; i++){
+                if(product[i].name.toLowerCase().includes(productSearch)){
+                    productsResults.push(product[i])
+                }
+            }
+            console.log(productsResults)
+            return res.render('products', {products:productsResults})
+        }))
+    },
     create: (req, res) => {
         res.render('product-create-form')
     },
