@@ -7,7 +7,7 @@
 	<section class="edit_form">
 		<h2>Formulario de edición de productos</h2>
         <p>Estas editando: <%= product.name %></p>
-        <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="edit_form_main">
+        <form action="/products/edit/<%= product.idproduct %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="edit_form_main">
             <div class="product_field">
                 <label for="nombre">Nombre del producto</label>
                 <br>

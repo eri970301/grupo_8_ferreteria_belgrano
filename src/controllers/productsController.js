@@ -58,7 +58,7 @@ const controller = {
             discount: parseInt(req.body.discount),
         }, {
             where: {
-                id: req.params.id
+                idproduct: req.params.id
             },
         })
         res.redirect('/products')
@@ -70,7 +70,7 @@ const controller = {
         let id = req.params.id;
         db.Products.destroy({
             where: {
-                id: id
+                idproduct: id
             }
         })
             .then(() => {
@@ -83,8 +83,10 @@ const controller = {
     },
     detail: (req, res) => {
         let id = req.params.id;
+        console.log(id)
         db.Products.findByPk(id)
             .then(product => {
+                console.log(product)
                 res.render('detail', { product:product });
             })
             .catch(error => {
@@ -96,4 +98,3 @@ const controller = {
 }
 
 module.exports = controller
-
