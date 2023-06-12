@@ -12,8 +12,7 @@ const controller = {
         })
     },
     search: (req, res) =>{
-        let productSearch = req.query.query;
-        productSearch.toLowerCase();
+        let productSearch = req.query.query.toLowerCase();
         let productsResults = [];
         db.Products.findAll()
         .then((product =>{
