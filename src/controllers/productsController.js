@@ -54,9 +54,7 @@ const controller = {
     },
     delete: (req, res) => {
         let id = req.params.id;
-
-
-        Product.destroy({
+        db.Products.destroy({
             where: {
                 id: id
             }
@@ -71,13 +69,9 @@ const controller = {
     },
     detail: (req, res) => {
         let id = req.params.id;
-        Product.findOne({
-            where: {
-                id: id
-            }
-        })
+        db.Products.findByPk(id)
             .then(product => {
-                res.render('detail', { product });
+                res.render('detail', { product:product });
             })
             .catch(error => {
                 console.error('Error al obtener el detalle del producto:', error);
