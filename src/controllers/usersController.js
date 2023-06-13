@@ -2,8 +2,9 @@ const path = require("path")
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const controller = require("./productsController");
 const usersFilePath = path.join(__dirname, "../dataBase/users.json");
-const productsFilePath = path.join(__dirname, "../dataBase/products.json");
+
 
 const users = {
     login: (req, res) => {
@@ -39,49 +40,80 @@ const users = {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
+                password: bcrypt.hashSync(req.body.password),
                 type: req.body.role,
                 avatar: req.file ? req.file.filename : 'user.jpg'
             };
             users.push(usuarioNuevo);
             let usersJSON = JSON.stringify(users, null, " ");
             fs.writeFileSync(usersFilePath, usersJSON);
+            if(usuarioNuevo.type === "Cliente"){
+                res.send("CLIENTE")} else{
+                    res.send("ADMINISTRADOR");
+                }
+            console.log(usuarioNuevo.type)
             res.redirect("personal");
         } else {
+           
             res.render('users/register', {
+                
                 errors: errors.array(),
                 old: req.body
+                
             })
         }
     },
-    personal: (req, res) => {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        return res.render('users/personal', { users })
-    },
-
+    
     Eliminar: (req, res) => {
         let id = req.params.id;
 
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 
-        const usuario = users.find(user => {
-            return users.id == id
+        let finalUsers = users.filter(user => {
+            return user.id != id
         })
-        console.log(usuario)
-        res.send('FALTA TERMINAR ')
+      
 
+         let usersJSON = JSON.stringify(finalUsers, null, ' ');
 
+        fs.writeFileSync(usersFilePath, usersJSON); 
 
+        console.log(finalUsers)
+         res.redirect("/");
     },
-    detail: (req, res) => {
+
+    
+    personal: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
+        return res.render('users/Admi', { users })
+    },
+ 
+    detailDG: (req, res) => {
+ 
         let id = req.params.id
-        let product = products.find(product => product.id == id)
 
-        res.render('detail', { users })
-    }
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+        let userToSend = users.find(user => user.id == id)
 
-}
+        res.render('delet', {userToSend})
+        console.log(userToSend)
+        
+       /*  res.render("login") */
+  /*       res.render("Admi", {user: userToSend}) */
+
+
+    }, 
+    detail: (req, res) => {
+       
+        let id = req.params.id
+
+        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+        let userToSend = users.find(user => user.id == id)
+   
+          res.render('users/delet', {users: userToSend}) 
+        console.log(userToSend)  
+    },
+
+};
 
 module.exports = users
