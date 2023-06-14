@@ -1,41 +1,5 @@
 [
  {
-  "id": 1,
-  "firstName": "ante",
-  "lastName": "felis",
-  "email": "czecchi0@aboutads.info",
-  "password": "s9x5h3Xzu",
-  "type": "Customer",
-  "avatar": "Matias.jpg"
- },
- {
-  "id": 2,
-  "firstName": "viverra",
-  "lastName": "amet",
-  "email": "hogrogane1@soup.io",
-  "password": "p41lIIjhymNs",
-  "type": "Admin",
-  "avatar": "Matias.jpg"
- },
- {
-  "id": 3,
-  "firstName": "adipiscing",
-  "lastName": "sapien",
-  "email": "atembey2@surveymonkey.com",
-  "password": "0gAQXM5Kgud",
-  "type": "Customer",
-  "avatar": "user.jpg"
- },
- {
-  "id": 4,
-  "firstName": "in ante",
-  "lastName": "at",
-  "email": "ashout3@alibaba.com",
-  "password": "qfz6Hy8CgY",
-  "type": "Customer",
-  "avatar": "Atina.jpg"
- },
- {
   "id": 5,
   "firstName": "nisl ut",
   "lastName": "ac",
@@ -297,15 +261,6 @@
   "avatar": "avatar-1682219473422.jpg"
  },
  {
-  "id": 34,
-  "firstName": "hola",
-  "lastName": "test",
-  "email": "test@lp.com",
-  "password": "",
-  "type": "customer",
-  "avatar": "user.jpg"
- },
- {
   "id": 35,
   "firstName": "",
   "lastName": "",
@@ -343,11 +298,569 @@
  },
  {
   "id": 39,
+<<<<<<< HEAD
+  "firstName": "prueba",
+  "lastName": "prueba",
+  "email": "NICO@HOTMAIL.COM",
+  "password": "$2a$10$HEwGBZG/O.YE4FEnz4i9.eBGOn7RjjdlBxxD6x4cdW4ECJEn6KvHO",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 40,
+  "firstName": "niconico",
+  "lastName": "nicocnio",
+  "email": "NICO@HOTMAIL.COM",
+  "password": "$2a$10$MIPYL8AvStesBg.twFtBtuAyYta7nrnAhkD3kUyYcPQcnspxEd2wG",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 41,
+  "firstName": "das",
+  "lastName": "dsa",
+  "email": "NICO@HOTMAIL.COM",
+  "password": "$2a$10$mznCK0rqcRDWQ9Oe7/JJcug5DzIXD5i7hpzwAAjiNFqd5A8H6ni9G",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 42,
+  "firstName": "fsfd",
+  "lastName": "fdsafdsa",
+  "email": "NICO@HOTMAIL.COM",
+  "password": "$2a$10$mbfgiGJRvlJHFFr00cnVpOxmG8YAfiH0F7SoVvnqrbiK6i9WLwNKC",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 43,
+  "firstName": "nicolasADMINISTRADOR",
+  "lastName": "ADMINISTRADOR",
+  "email": "NICOADMI@HOTMAIL.COM",
+  "password": "$2a$10$CBt81b5EPPpfMfPNHiz1U.pdczc85JVBQlgGr1p03S3M/z6AtvjZy",
+  "type": "Administrador",
+  "avatar": "avatar-1686416174784.jpg"
+ },
+ {
+  "id": 44,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$gEdh7QZKtojoq8iLRkyk4Ob7EKruoV5GMuknNQ0GPJVJpl8zlQ/cO",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 45,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$oKGAXFJL04A75taY.pe2Ke8ZRkfUr3gr830yebporOK/Nco58nVJK",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 46,
+  "firstName": "holaHO",
+  "lastName": "hola",
+  "email": "hol@hola.com",
+  "password": "$2a$10$70yOD4oiZ9uRomk8fHsRXe6n1KE9fZIwVgGBBPBxMnTkQ5zL1uxNa",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 47,
+  "firstName": "holaHO",
+  "lastName": "hola",
+  "email": "hol@hola.com",
+  "password": "$2a$10$y3GUyRj9S7/4QmTClZoA/uJ/XMVTBsK/FlaBVtE5PgKWCTMwXI5MK",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 48,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTESOY@CLIENTE.COM",
+  "password": "$2a$10$WmWeiL/WCm8fU6Rser4dL.6i7McWNgwDphgNgY2zauPDuM0DTuAjS",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 49,
+  "firstName": "ADMI",
+  "lastName": "ADMI",
+  "email": "ADMI@ADMI.COM",
+  "password": "$2a$10$GTRTxk6CyUbsar6vWOQuNexKiX/OiDXOeOVVrL29ivIne7WkGAraK",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 50,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$sjzv8zQk29SN/uZN/DMeju/4.DU0VLPp9O6e/29R/XYopOmCYStIy",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 51,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$zOvvrFgSKkbes8tKuvbgQu9AnSq/axuvGh8r5U4Crh.JheZDapuSq",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 52,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$uTx6T6k548U8J2HM7A.kW.8.6etPsb44JGpi7UOtnKRtulAG8ZZIy",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 53,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$EwOw9z6qQcoEk1ODKX8OpO/3fCPLXnlCeqGNr3fAEBfGL1cOGrgza",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 54,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$bdE4FFCaSCvPQa6SSgtfJO.YH8ApogpP5AFDiyyW1GeMQ0VNqevDW",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 55,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$bRepIxysUFAl3elN0Giax.PBMnU.tsN2BRBb4imsM1OE0qzC716M6",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 56,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$ypcmzEpDqJ/8OwPDwUM6xuF9nEbC2ciRyx9t4B0cp74B21DYC2TDO",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 57,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$F5vULUiV.MfxSxJfh5ik2OGuCZ.IW78RQQO4ZS6SVPZZDrdy.yjgy",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 58,
+  "firstName": "NICO",
+  "lastName": "NICK",
+  "email": "NICK@NICO.COM",
+  "password": "$2a$10$NKyySs4JRZFm8XmF69HkcuIA9wFoPwqJYibrjrrhDL1hE3njFoJpW",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 59,
+  "firstName": "administrador",
+  "lastName": "administrador",
+  "email": "administrador@administrador.com",
+  "password": "$2a$10$yrUVMdwWOXEC0bSMoShIBeHGCewbQa/9rnHx/34m.jKOj7XV4vXHe",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 60,
+  "firstName": "administrador",
+  "lastName": "administrador",
+  "email": "administrador@administrador.com",
+  "password": "$2a$10$b8Dt5/210JylxAwO2NZLBOlgivXSgE4n8HCHWqmBRKm2G2BcT/z1C",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 61,
+  "firstName": "administrador",
+  "lastName": "administrador",
+  "email": "administrador@administrador.com",
+  "password": "$2a$10$d1kA5F/eXOOaPzrKjLZfO.Ct99C21gANZpc8EDhuaYVQwZi98S/Wu",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 62,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$IL8GtcGN6RZIyYFo1nRnzuWGX8HyyKHKRmxXbR0e8CtGZMaaxT4cG",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 63,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$paan/hrvk0jmldcR/3kis.Fst6R54mCCThTrUCHwZlDca9F5E3KIm",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 64,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$RHc0Nt4mK3753sGvkoy9feTVyzamyt3vvtSExd6Z/y2a8jjqvwsJe",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 65,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$QNeuhBMGQLBlVnhllxgvOuD8qbgo3bIXYg4ZdF5uL3b2JpdUghGli",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 66,
+  "firstName": "CLIENTE",
+  "lastName": "CLIENTE",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$KwoqSBrK2ycZJXTxb5pnvuj8Cn6/3FRIdidydb9Dl9qRKkiZTRVam",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 67,
+  "firstName": "administrador",
+  "lastName": "administrador",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$Z8xEGbDjllACr1u5jMUqgeQPJIOX7Kux.QX/Q1480omcTGTe4SH.O",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 68,
+  "firstName": "administrador",
+  "lastName": "administrador",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$ayGGRGFTQ4i8eiD/JWThNO/iMwHIAywN7GPJyYIU5AWa6exdNp4By",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 69,
+  "firstName": "administrador",
+  "lastName": "administrador",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$XRDRI9Qy6Q.onBFOAMUahe659SzARC/2YW019y3JG2oMgZ.yuFIQ.",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 70,
+  "firstName": "administrador",
+  "lastName": "administrador",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$fM.ceawuBgXOtKc/8ylRdebDXIWyMkzUhsm74SNI9HCtmbjlZ2a9i",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 71,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$qooloHi8hyRcQlqM/pP1Te6xPbWsGX0zes5syQN9XCZE4fVOtlZe2",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 72,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$k8SvPT91aAj27R4jtva2TOZvmg9Bj3Inwq/wCLV.a1rY0CXGbQ6Qi",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 73,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$VMb7mr/ni1KNvIn4nIi9ZOjpOPSdiWQiPb6PHUUgIPIRynWEt0PHK",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 74,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$4JvBCDOKOz/9w3O.enKpxONaV0Uwra0mokQoEHEgs.6I279ijkA5C",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 75,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$MhzjNJqwfOGizboq1Wk/rOdadDOTkPR0zEK7J.rkfjpjrJyBJhTHq",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 76,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$P0SefbXhjjsErlNgehA3Heli87e8Mn54ZMkEcNEQ9FdmUGnLk0Ase",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 77,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$zSCpIbZEFcdKXP4PO/VsAulZqlM7yrBkNVB4hI/u17Ftao9o7xh3e",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 78,
+  "firstName": "fdsa",
+  "lastName": "dasf",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$s6SYe5AZmYslpULpN.Cg6.vpnb1fbP1VedJdddb7/m4V1jGyijCre",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 79,
+  "firstName": "dsa",
+  "lastName": "dsa",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$nvfQDT0yGijANgrB86OTgumFJtLw3ij8Fo3UikRWe2Ti20pvnmDK2",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 80,
+  "firstName": "dsa",
+  "lastName": "dsa",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$TRPZ//blKEBngOILbHZAGuys3lwXSxuC5tWltg.zwMvr2GpHKJutS",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 81,
+  "firstName": "dsa",
+  "lastName": "dsa",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$HEGRLnwwx8Mcm7f372IVe.ySDs/7uBKeUSzTkJzqbIHRAJMWGcRrq",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 82,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$f.E2vgZJrQcDOO/IGo3kNu1I5vn.JNJDtb2LL4Q0ywAfOl4TrbROq",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 83,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$kOdQwTPqjPX1mDY6YpooiOwa7d208cAshJjC3K/64Uj3f4etig81i",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 84,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$1Fu5ZEwrp4U60xZSzkdxtO/iwWPBynoR2hvnSZYhpARKBokxvyVDS",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 85,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$lkd.BsANd0.mVN2SJHxP9et/U8Il7P6eFcTmRafqY1h/hNSxMlfDW",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 86,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$ImPoXY0IglU.13W0zh9Rde/KCc2zQ8uKVMyQNxpXOd6JIZAdQqrvK",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 87,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$gHjsaxsUcEEG.mTeV5I6iONciqBQ4qOmmpXtDPgntxAezQ4kkcO.u",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 88,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$motTYCnBeH6NisEMHw3.ceNa3x8tLVPa8F.SOg4mJ8PlGcWKNSuEG",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 89,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$h7kZ6xGDgJ0Xuq6iT4cEOeaQGc/oHBWUREkkaHNJW2NHTHJYSqQ/u",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 90,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$/pv8KPjpWGqo8k5z1K6U9OBmEExjXafuctzFpDDwhaHwhQdXxBSPS",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 91,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$4cG8vKudufueM03Ef/okGuddYdyiqPURnlFfYK5.4QxGXcyqrky7O",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 92,
+  "firstName": "sfd",
+  "lastName": "afdasfdfdsffd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$cgU0Ps4jk4mRm.HS1BwsYOjL9ZxpTOxiB7Wcza2zMXCmABiotuvKC",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 93,
+  "firstName": "lucas",
+  "lastName": "lucas",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$aLTuN6lKqIMWIdQWfUt0p.KbYWrS0nTZbyhSLfHuYnlulkBLU2zIK",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 94,
+  "firstName": "fds",
+  "lastName": "fds",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$EV5bWQenrpB2PYC15X3xK.Tztq9eHUxk5VGOhRba6pY1lXy.XzA3.",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 95,
+  "firstName": "fad",
+  "lastName": "fdfd",
+  "email": "CLIENTE@CLIENTE.COM",
+  "password": "$2a$10$46lH4nWa5kr5cJIw89qXZuAMeas6FunDfQUs2UdKdYOXEwTGDKbk2",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 96,
+  "firstName": "fds",
+  "lastName": "fsd",
+  "email": "CLIENTEFALSO@GOTMAIL.COM",
+  "password": "$2a$10$2SmuxQfe/B3pH70uCPxI9OVyrAnxoLnV2UAtxDrxs4/NFdQKHXi1i",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 97,
+  "firstName": "fds",
+  "lastName": "fsd",
+  "email": "CLIENTEFALSO@GOTMAIL.COM",
+  "password": "$2a$10$vbQfgTJgNsT0I857SFSQxuM3GMS2kM20fwDFd0nsDUsy8hYNWPM2u",
+  "type": "Cliente",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 98,
+  "firstName": "soyadmi@admi.com",
+  "lastName": "admi",
+  "email": "ADMI@ADMI.COM",
+  "password": "$2a$10$erEbuvOquGRJrgXxKMDIT.F1cAIDgcYpkGpBRMx9ZYRdXxKe448oa",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 99,
+  "firstName": "ADMI",
+  "lastName": "ADMI",
+  "email": "admi@admi.com",
+  "password": "$2a$10$I8dLlVDCNauu3abbBn7SAOKTlKZ5LfqS0HAdv44bDckqvaubVRbDW",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+ },
+ {
+  "id": 100,
+  "firstName": "das",
+  "lastName": "asdasd",
+  "email": "ADMI@ADMI.COM",
+  "password": "$2a$10$a1sp48YBKNLtvZzA8hbbGOHbFYFFvMjNY5r126kywUPh9BFu8v2rK",
+  "type": "Administrador",
+  "avatar": "user.jpg"
+=======
   "firstName": "Santiago",
   "lastName": "Martin",
   "email": "santiyfidel@gmail.com",
   "password": "$2a$10$ycyDBhzGFpXfPiN2HpdH1OEKUOE63zyKqzLbjYEQ3qqFrwwAeqGt6",
   "type": "Administrador",
   "avatar": "avatar-1685635628595.jpg"
+>>>>>>> 5dc7cb679120b058c6a5305aad9a0141c57691a9
  }
 ]

@@ -1,0 +1,37 @@
+<%- include('../partials/head.ejs') %>
+
+   
+        <%- include('../partials/header.ejs') %>
+          
+		<div class="contenedor">
+
+				
+					<img src="/img/users/<%= users.avatar %>" class="persona">				
+		
+			
+		<div class="grupo">
+
+			<div class="Nombre">
+				<h1><%= users.firstName %> <%= users.lastName %></h1>
+			</div>
+			<div class="Email">
+				<h1><%= users.type %> 
+			</div>
+			<div class="Email">
+				<h1><%= users.email %> 
+			</div>
+
+			<div class="Imagen">
+				<a href="/users/Eliminar/<%= users.id %>" class="boton">ELIMINAR PERSONAL</a>
+			</div>
+	 
+		</div>
+
+		</div>
+			
+            </main>
+            
+ 
+	
+	<%- include('../partials/footer.ejs') %>
+    </html>
