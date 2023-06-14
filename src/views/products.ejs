@@ -15,7 +15,7 @@
                     <% products.forEach(product => { 
                       let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                       %>
-                      <a href="/products/detail/<%= product.id %>">
+                      <a href="/products/detail/<%= product.idproduct %>">
                         <article class="product_carousel">
                           <div class="product_carousel_card">
                             <img src="/img/<%= product.image %>">

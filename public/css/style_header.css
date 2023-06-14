@@ -88,18 +88,19 @@ header {
     .mobile_bar {
         display: none
     }
-    .top_bar_search i{
-        color: var(--accent-color);
+    .top_bar_search .input_search_main{
+        color: #000;
         font-size: 15px;
-        border: 2px solid var(--accent-color);
+        border: 1px solid var(--accent-color);
         border-radius: 0px 40px 40px 0px;
         padding: 5px;
+        background-color: #fff;
     }
-    .top_bar_search input{
+    .top_bar_search .input_search_text{
         border: none;
         padding: 7px 0px;
         border-radius: 40px 0px 0px 40px;
-        width: 200px;
+        width: 160px;
     }
     .top_bar_search{
         display: flex;

@@ -1,14 +1,15 @@
-const path = require("path")
+const path = require("path");
 const fs = require('fs');
+const db = require('../database/models');
+
 const controller = {
     index: (req, res) => {
-        const products = JSON.parse(fs.readFileSync(productsFilePath,"utf-8"));
-        return res.render('index', {products})
+        db.Products.findAll().then((product) => {
+            console.log(product)
+            return res.render('index', { products: product })
+        })
     }
-  
-    
 };
-const productsFilePath = path.join(__dirname,"../dataBase/products.json");
 
 
 module.exports = controller;

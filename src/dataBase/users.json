@@ -298,6 +298,7 @@
  },
  {
   "id": 39,
+<<<<<<< HEAD
   "firstName": "prueba",
   "lastName": "prueba",
   "email": "NICO@HOTMAIL.COM",
@@ -853,5 +854,13 @@
   "password": "$2a$10$a1sp48YBKNLtvZzA8hbbGOHbFYFFvMjNY5r126kywUPh9BFu8v2rK",
   "type": "Administrador",
   "avatar": "user.jpg"
+=======
+  "firstName": "Santiago",
+  "lastName": "Martin",
+  "email": "santiyfidel@gmail.com",
+  "password": "$2a$10$ycyDBhzGFpXfPiN2HpdH1OEKUOE63zyKqzLbjYEQ3qqFrwwAeqGt6",
+  "type": "Administrador",
+  "avatar": "avatar-1685635628595.jpg"
+>>>>>>> 5dc7cb679120b058c6a5305aad9a0141c57691a9
  }
 ]

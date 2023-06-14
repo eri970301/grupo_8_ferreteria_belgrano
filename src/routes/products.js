@@ -22,5 +22,6 @@ router.get('/edit/:id', productsController.edit);
 router.patch('/edit/:id',upload.single('productImage'), productsController.update);
 router.get('/cart',productsController.cart);
 router.get('/detail/:id', productsController.detail); 
+router.get('/search', productsController.search);
 
 module.exports = router
