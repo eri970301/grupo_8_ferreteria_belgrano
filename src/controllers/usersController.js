@@ -10,54 +10,65 @@ const users = {
         return res.render('users/login')
     },
     processLogin: (req, res) => {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        let usuarios;
-        if (users == '') {
-            usuarios = [];
-        } else {
-            usuarios = users
-        }
-        /* inicio de seccion */
-        for (let i = 0; i < usuarios.length; i++) {
-            if (req.body.email == usuarios[i].email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-                return res.render('users/Admi', { users })
-                res.cookie('recordame', usuarios[i].email, { maxAge: 60000 });
-                res.send('Holaaa usuario');
+        const { email, password } = req.body;
+        
+        Usuario.findOne({ where: { email } })
+          .then(usuario => {
+            if (usuario && bcrypt.compareSync(password, usuario.password)) {
+              res.cookie('recordame', usuario.email, { maxAge: 60000 });
+              return res.render('users/Admi', { users: [] });
             }
-        }
-        return res.render('users/register')
-    },
+            
+            return res.render('users/register');
+          })
+          .catch(error => {
+            console.error('Error en processLogin:', error);
+            return res.status(500).send('Error en el servidor');
+          });
+      },
+      
+    
     registro: (req, res) => {
         return res.render('users/register')
     },
     guardarUsuario: (req, res) => {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
         const errors = validationResult(req);
         if (errors.isEmpty()) {
-            let usuarioNuevo = {
-                id: users[users.length - 1].id + 1,
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                email: req.body.email,
-                password: bcrypt.hashSync(req.body.password, 10),
-                type: req.body.role,
-                avatar: req.file ? req.file.filename : 'user.jpg'
-            };
-            users.push(usuarioNuevo);
-            let usersJSON = JSON.stringify(users, null, " ");
-            fs.writeFileSync(usersFilePath, usersJSON);
-            res.redirect("personal");
-        } else {
-            res.render('users/register', {
-                errors: errors.array(),
-                old: req.body
+          const usuarioNuevo = {
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 10),
+            type: req.body.role,
+            avatar: req.file ? req.file.filename : 'user.jpg'
+          };
+          Usuario.create(usuarioNuevo)
+            .then(nuevoUsuario => {
+              res.redirect("personal");
             })
+            .catch(error => {
+              console.error('Error en guardarUsuario:', error);
+              return res.status(500).send('Error en el servidor');
+            });
+        } else {
+          res.render('users/register', {
+            errors: errors.array(),
+            old: req.body
+          });
         }
-    },
+      },
+      
     personal: (req, res) => {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        return res.render('users/personal', { users })
-    },
+        Usuario.findAll()
+          .then(users => {
+            return res.render('users/personal', { users });
+          })
+          .catch(error => {
+            console.error('Error en personal:', error);
+            return res.status(500).send('Error en el servidor');
+          });
+      },
+      
 
     Eliminar: (req, res) => {
         let id = req.params.id;
