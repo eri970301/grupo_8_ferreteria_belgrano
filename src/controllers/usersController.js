@@ -10,6 +10,8 @@ const users = {
     login: (req, res) => {
         return res.render('users/login')
     },
+
+    
     processLogin: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
         let usuarios;
@@ -20,17 +22,32 @@ const users = {
         }
         /* inicio de seccion */
         for (let i = 0; i < usuarios.length; i++) {
-            if (req.body.email == usuarios[i].email && bcrypt.compareSync(req.body.password, usuarios[i].password)) {
-                return res.render('users/Admi', { users })
-                res.cookie('recordame', usuarios[i].email, { maxAge: 60000 });
-                res.send('Holaaa usuario');
+            if (req.body.email == usuarios[i].email && bcrypt.compareSync(req.body.password, usuarios[i].password)){
+                 res.cookie('recordame', usuarios[i].email, { maxAge: 60000 });
+          
+
+                 switch (usuarios[i].type) {
+                    case "Cliente":
+                        return res.render('users/personal', { users });
+                      break;
+                    case "Administrador":
+                        return res.render('users/Admi', { users })
+                      break;
+                  default:  res.send("No sos usuario registrado");
+  
             }
         }
-        return res.render('users/register')
+    }
     },
+
+
+
     registro: (req, res) => {
         return res.render('users/register')
     },
+
+
+
     guardarUsuario: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
         const errors = validationResult(req);
@@ -48,11 +65,12 @@ const users = {
             let usersJSON = JSON.stringify(users, null, " ");
             fs.writeFileSync(usersFilePath, usersJSON);
             if(usuarioNuevo.type === "Cliente"){
-                res.send("CLIENTE")} else{
-                    res.send("ADMINISTRADOR");
+                res.redirect("/")
+                
+            } else{
+                    return res.render('users/Admi', { users })
                 }
-            console.log(usuarioNuevo.type)
-            res.redirect("personal");
+               
         } else {
            
             res.render('users/register', {
@@ -85,7 +103,7 @@ const users = {
     
     personal: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        return res.render('users/Admi', { users })
+        res.render('users/register')
     },
  
     detailDG: (req, res) => {
