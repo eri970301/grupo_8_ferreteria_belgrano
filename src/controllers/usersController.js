@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const controller = require("./productsController");
 const usersFilePath = path.join(__dirname, "../dataBase/users.json");
+const db = require('../database/models');
 
 
 const users = {
@@ -15,11 +16,11 @@ const users = {
     processLogin: (req, res) => {
         const { email, password } = req.body;
         
-        Usuario.findOne({ where: { email } })
-          .then(usuario => {
-            if (usuario && bcrypt.compareSync(password, usuario.password)) {
-              res.cookie('recordame', usuario.email, { maxAge: 60000 });
-              return res.render('users/Admi', { users: [] });
+        Users.findOne({ where: { email } })
+          .then(User => {
+            if (Users && bcrypt.compareSync(password, Users.password)) {
+              res.cookie('recordame', Users.email, { maxAge: 60000 });
+              return res.render('users/Admi', { Users: [] });
             }
             
             return res.render('users/register');
@@ -40,7 +41,7 @@ const users = {
     guardarUsuario: (req, res) => {
         const errors = validationResult(req);
         if (errors.isEmpty()) {
-          const usuarioNuevo = {
+          const users = {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
@@ -48,9 +49,10 @@ const users = {
             type: req.body.role,
             avatar: req.file ? req.file.filename : 'user.jpg'
           };
-          Usuario.create(usuarioNuevo)
-            .then(nuevoUsuario => {
-              res.redirect("personal");
+          db.Users.create(users)
+            .then(user => {
+              res.redirect("/users/personal")
+              console.log(user)
             })
             .catch(error => {
               console.error('Error en guardarUsuario:', error);
@@ -65,9 +67,9 @@ const users = {
       },
       
     personal: (req, res) => {
-        Usuario.findAll()
+        db.Users.findAll()
           .then(users => {
-            return res.render('users/personal', { users });
+            return res.render('users/personal', { users: users });
           })
           .catch(error => {
             console.error('Error en personal:', error);
@@ -94,11 +96,6 @@ const users = {
          res.redirect("/");
     },
 
-    
-    personal: (req, res) => {
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        res.render('users/register')
-    },
  
     detailDG: (req, res) => {
  
