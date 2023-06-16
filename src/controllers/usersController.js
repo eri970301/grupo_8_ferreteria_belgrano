@@ -14,23 +14,38 @@ const users = {
 
     
     processLogin: (req, res) => {
-        const { email, password } = req.body;
-        
-        Users.findOne({ where: { email } })
-          .then(User => {
-            if (Users && bcrypt.compareSync(password, Users.password)) {
-              res.cookie('recordame', Users.email, { maxAge: 60000 });
-              return res.render('users/Admi', { Users: [] });
-            }
+      const { email, password } = req.body;
+    
+      db.Users.findOne({ where: { email } })
+        .then(users => {
+          if (!users) {
             
-            return res.render('users/register');
-          })
-          .catch(error => {
-            console.error('Error en processLogin:', error);
-            return res.status(500).send('Error en el servidor');
-          });
-      },
-      
+            return res.render('users/login');
+          }
+    
+          if (bcrypt.compareSync(password, users.password)) {
+           
+    
+            if (users.type == 'administrador') {
+              
+              res.cookie('recordame', users.email, { maxAge: 60000 });
+              return res.render('users/admi', {users : [users] });
+            } else {
+              
+              res.cookie('recordame', users.email, { maxAge: 60000 });
+              return res.render('users/personal', { users : [users] });
+            }
+          }
+    
+          
+          return res.render('users/login');
+        })
+        .catch(error => {
+          console.error('Error en processLogin:', error);
+          return res.status(500).send('Error en el servidor');
+        });
+    },
+    
     
     registro: (req, res) => {
         return res.render('users/register')
