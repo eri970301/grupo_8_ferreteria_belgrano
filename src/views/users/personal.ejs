@@ -17,24 +17,31 @@
             <a href="http://" class="product_link_title">Ver más</a>
         </div>
         <section class="product_recomended">
-            <% users.forEach(user=> { %>
-                <article class="product_carousel">
+            <% users.forEach(user => { 
+                let finalPrice = (user.price * ((100 - user.discount) / 100)).toFixed(0)
+                %>
+                <a href="/users/detail/<%= user.iduser %>">
+                  <article class="product_carousel">
                     <div class="product_carousel_card">
                         <img src="../../../public/img/users/<%= user.image %>">
-                        <h3>
-                            <%= user.firstName %>
-                        </h3>
-                        <h4>
-                            <%= user.lastName %>
-                        </h4>
-                        <h5>
-                            <%= user.email %>
-                        </h5>
-                        <h6>
-                            <%= user.type %>
-                        </h6>
+                      <h3>
+                        <%= user.firstName %>
+                    </h3>
+                    <h4>
+                        <%= user.lastName %>
+                    </h4>
+                    <h5>
+                        <%= user.email %>
+                    </h5>
+                    <h6>
+                        <%= user.type %>
+                    </h6>
+                      
                     </div>
-                </article>
-                <% }) %>
+                  </article>
+
+                </a>
+              <% }) %>
         </section>
+
         <%- include('../partials/footer.ejs') %>

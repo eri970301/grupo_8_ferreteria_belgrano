@@ -1,37 +1,42 @@
 <%- include('../partials/head.ejs') %>
-
-   
+    <body>
         <%- include('../partials/header.ejs') %>
-          
-		<div class="contenedor">
+                <!---Sección productos recomendados-->
+         
+                <div class="recomended_products_title">
+                    <h2>ELIMINAR USUARIO FERRETERIA BELGRANO</h2><a href="http://" class="product_link_title">Ver más</a>
+                </div>
+          <section class="edit_form">
+                      <article class="product_carousel">
+                        <div class="product_carousel_card">
+                          <h3><%= user.firstName %></h3>
+                          <h4><%= user.type %></h4>
+                        </div>
+                      </article>
+                    
+                        <div class="products_title">
+                      <form action="/users/delete/<%= user.iduser %>"method="POST">
+                        <BUtton type="submit" class="detail_button"">ELIMINAR USUARIO</BUtton>   
+                             
+                      </form>
+                    </div>
+          </section>
+          <section>
+        
 
-				
-					<img src="/img/users/<%= users.avatar %>" class="persona">				
-		
-			
-		<div class="grupo">
+				<ul class="payment">
+					<li class="payment_tabs_tab">
+						<i class="fas fa-credit-card"></i>
+						<p>Pagá en 12 cuotas sin interes</p>
+					</li>
+					<li class="payment_tabs_tab">
+						<i class="fas fa-store"></i>
+						<p>Retiro gratis en locales del vendedor</p>
+					</li>
+				</ul>
 
-			<div class="Nombre">
-				<h1><%= users.firstName %> <%= users.lastName %></h1>
-			</div>
-			<div class="Email">
-				<h1><%= users.type %> 
-			</div>
-			<div class="Email">
-				<h1><%= users.email %> 
-			</div>
-
-			<div class="Imagen">
-				<a href="/users/Eliminar/<%= users.id %>" class="boton">ELIMINAR PERSONAL</a>
-			</div>
-	 
-		</div>
-
-		</div>
-			
-            </main>
-            
- 
-	
-	<%- include('../partials/footer.ejs') %>
-    </html>
+              </section>
+            <!---Footer-->
+            <%- include('../partials/footer.ejs') %>
+              </body>
+</html>

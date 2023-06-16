@@ -85,23 +85,23 @@ const users = {
       },
       
 
-    Eliminar: (req, res) => {
-        let id = req.params.id;
+   Eliminar: (req, res) => {
+      let id = req.params.id;
+      db.Users.destroy({
+          where: {
+            
+              iduser: id
+          }
+      })
+          .then(() => {
+              res.redirect('/');
+          })
+          .catch(error => {
+              console.error('Error al eliminar el Usuario:', error);
+              res.redirect('/');
+          })
+          },
 
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-
-        let finalUsers = users.filter(user => {
-            return user.id != id
-        })
-      
-
-         let usersJSON = JSON.stringify(finalUsers, null, ' ');
-
-        fs.writeFileSync(usersFilePath, usersJSON); 
-
-        console.log(finalUsers)
-         res.redirect("/");
-    },
 
  
     detailDG: (req, res) => {
@@ -120,16 +120,19 @@ const users = {
 
     }, 
     detail: (req, res) => {
-       
-        let id = req.params.id
-
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        let userToSend = users.find(user => user.id == id)
-   
-          res.render('users/delet', {users: userToSend}) 
-        console.log(userToSend)  
-    },
-
-};
+      let id = req.params.id;
+            console.log(id)
+            db.Users.findByPk(id)
+                .then(user => {
+                  return res.render('users/delet', { user: user });
+                  console.log(users)
+                })
+                .catch(error => {
+                    console.error('Error al obtener el detalle del producto:', error);
+                    res.redirect('/products');
+                });
+        }
+    
+    };
 
 module.exports = users

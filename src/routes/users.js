@@ -29,7 +29,9 @@ router.get('/register', usersController.registro);
 router.post('/register', upload.single('avatar'), validations, usersController.guardarUsuario)  
 router.get('/personal', usersController.personal);  
 router.get('/detail/:id', usersController.detail);  
-router.get('/Eliminar/:id', usersController.Eliminar);  
+router.get('/delete', usersController.Eliminar);  
+router.post('/delete/:id', usersController.Eliminar);
+module.exports = router 
 
 
 
