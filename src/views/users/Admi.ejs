@@ -1,31 +1,58 @@
-<%- include('../partials/head.ejs') %>
-    <body>
-        <%- include('../partials/header.ejs') %>
-                <!---Sección productos recomendados-->
-         
-                <div class="recomended_products_title">
-                    <h2>HOLA ADMINISTRADOR</h2><a href="http://" class="product_link_title">Ver más</a>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style_personal.css">
+  <link rel="stylesheet" href="/css/style_header.css">
+  <link rel="stylesheet" href="/css/style_footer.css">
 
-                <section class="product_recomended">
-                  <% users.forEach(user => { 
-                      let finalPrice = (user.price * ((100 - user.discount) / 100)).toFixed(0)
-                      %>
-                       <a href="/users/detail/<%= user.id %>">
-                            <article class="product_carousel">
-                          <div class="product_carousel_card">
-                            <img src="/img/users/<%= user.avatar %>">
-                            <h3><%= user.firstName %></h3>
-                            <h4><%= user.lastName %></h4>
-                            <h5><%= user.email %></h5>
-                            <h6><%= user.type %></h6>
-                          </div>
-                        </article>
+  <title>Personal</title>
+</head>
 
-                      </a>
-                    <% }) %>
-              </section>
-            <!---Footer-->
-            <%- include('../partials/footer.ejs') %>
-              </body>
+<body>
+  <%- include('../partials/header.ejs') %>
+    <!---Sección productos recomendados-->
+
+    <main>
+      <div class="recomended_products_title">
+        <% if (users.type==[0]) { %>
+          <h2>Hola <%= users[0].type %>
+          </h2>
+          <% } else { %>
+            <h2>Bienvenido cliente</h2>
+            <% } %><a href="http://" class="product_link_title">Ver más</a>
+      </div>
+
+      <section class="product_recomended">
+        <% users.forEach(user=> {
+          let finalPrice = (user.price * ((100 - user.discount) / 100)).toFixed(0)
+          %>
+          <a href="/users/detail/<%= user.id %>">
+            <article class="product_carousel">
+              <div class="product_carousel_card">
+                <img src="../../../public/img/users/<%= user.image %>">
+
+                <h3>
+                  <%= user.firstName %>
+                </h3>
+                <h4>
+                  <%= user.lastName %>
+                </h4>
+                <h5>
+                  <%= user.email %>
+                </h5>
+                <h6>
+                  <%= user.type %>
+                </h6>
+              </div>
+            </article>
+
+          </a>
+          <% }) %>
+      </section>
+    </main>
+    <!---Footer-->
+    <%- include('../partials/footer.ejs') %>
+</body>
+
 </html>

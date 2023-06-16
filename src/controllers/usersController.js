@@ -24,17 +24,9 @@ const users = {
           }
     
           if (bcrypt.compareSync(password, users.password)) {
-           
-    
-            if (users.type == 'administrador') {
-              
               res.cookie('recordame', users.email, { maxAge: 60000 });
               return res.render('users/admi', {users : [users] });
-            } else {
-              
-              res.cookie('recordame', users.email, { maxAge: 60000 });
-              return res.render('users/personal', { users : [users] });
-            }
+            
           }
     
           
@@ -62,7 +54,7 @@ const users = {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
             type: req.body.role,
-            avatar: req.file ? req.file.filename : 'user.jpg'
+            image: req.file ? req.file.filename : 'user.jpg'
           };
           db.Users.create(users)
             .then(user => {
