@@ -1,0 +1,47 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+                <!---Sección productos recomendados-->
+         
+                <h2 class="edit_form">Formulario de edición de usuarios</h2>
+	<section class="edit_form">
+
+        <form action="" enctype="multipart/form-data" class="edit_form_main">
+		
+        <p></p>
+       
+            <div class="product_field">
+                <label for="nombre">Nombre del usuario</label>
+                <br>
+                <input type="text" name="name" placeholder="Ej: Juan" class="Datos" value="<%= user.firstName %>">
+            </div>
+            <div class="product_field">
+                <label for="descuento">Segundo nombre del usuario</label>
+                <br>
+                <input type="text" name="lastname" placeholder="Ej: Martin" class="Datos" value="<%=  user.lastName %>">
+            </div>
+            <div class="product_field">
+                <label for="Email">Email del usuario</label>
+                <br>
+                <input type="text" name="email" placeholder="Ej: JuanMartin@gmail.com" class="Datos" value="<%=  user.email %>">
+            </div>
+		
+			<div class="edit_form_category product_field">
+				<label for="categoria">Categoría:</label>
+				<select name="category">
+					<option value="">Elegí</option>
+					<option value="in-sale">Administrador</option>
+					<option value="visited">Cliente</option>
+				</select>
+			</div>
+
+            <div class="second_product_field">
+                <button class="boton">Guardar Producto</button>
+            </div>
+        </form>
+    </section>
+      <!---Footer-->
+      <%- include('../partials/footer.ejs') %>
+</body>	
+</html>
+

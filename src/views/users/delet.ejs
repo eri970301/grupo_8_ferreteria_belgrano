@@ -17,9 +17,12 @@
                         <div class="products_title">
                       <form action="/users/delete/<%= user.iduser %>"method="POST">
                         <BUtton type="submit" class="detail_button"">ELIMINAR USUARIO</BUtton>   
-                             
                       </form>
-                    </div>
+					  
+					  <form action="/users/edit/<%= user.iduser %>"method="GET">
+					  <BUtton type="submit" class="detail_button"">EDITAR USUARIO</BUtton> 
+                    </form>
+					</div>
           </section>
           <section>
         

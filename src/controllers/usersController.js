@@ -75,7 +75,9 @@ const users = {
       
     personal: (req, res) => {
         db.Users.findAll()
+        
           .then(users => {
+           
             return res.render('users/personal', { users: users });
           })
           .catch(error => {
@@ -101,7 +103,20 @@ const users = {
               res.redirect('/');
           })
           },
-
+          
+    edit:(req, res) => {
+      let id = req.params.id;
+      db.Users.findByPk(id)
+          .then(user => {
+            return res.render('users/Edit', { user: user });
+            console.log(users)
+          })
+          .catch(error => {
+              console.error('Error al obtener el detalle del producto:', error);
+              res.redirect('/products');
+          });
+  },
+                
 
  
     detailDG: (req, res) => {
@@ -112,7 +127,7 @@ const users = {
         let userToSend = users.find(user => user.id == id)
 
         res.render('delet', {userToSend})
-        console.log(userToSend)
+    /*     console.log(userToSend) */
         
        /*  res.render("login") */
   /*       res.render("Admi", {user: userToSend}) */
@@ -121,7 +136,6 @@ const users = {
     }, 
     detail: (req, res) => {
       let id = req.params.id;
-            console.log(id)
             db.Users.findByPk(id)
                 .then(user => {
                   return res.render('users/delet', { user: user });

@@ -31,6 +31,7 @@ router.get('/personal', usersController.personal);
 router.get('/detail/:id', usersController.detail);  
 router.get('/delete', usersController.Eliminar);  
 router.post('/delete/:id', usersController.Eliminar);
+router.get('/edit/:id', usersController.edit);  
 module.exports = router 
 
 
