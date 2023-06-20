@@ -20,7 +20,6 @@ flex-direction: column;
     width: auto;
 }
 .edit_form input{
-    color: var(--second-color);
     font-size: 15px;
     padding: 10px;
     margin-top: 15px;
@@ -28,7 +27,6 @@ flex-direction: column;
     width: -webkit-fill-available;
 }
 .edit_form textarea{
-    color: var(--second-accent-color);
     font-size: 15px;
     padding: 10px;
     margin-top: 15px;

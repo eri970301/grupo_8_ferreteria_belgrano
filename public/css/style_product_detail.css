@@ -1,3 +1,6 @@
+.container{
+    margin: 30px;
+}
 .products-title{
     margin: 30px 10px;
 }
@@ -19,7 +22,7 @@
 }
 .detail_button{
     padding: 20px 30px;
-    margin: 30px;
+    margin: 30px 0px;
     background-color: #de2e30;
     border-radius: 10px;
     border:none;
@@ -29,6 +32,8 @@
     text-transform: uppercase;
     font-weight: 600;
     min-width: 230px;
+    display: block;
+    width: -webkit-fill-available;
 }
 .detail_button:hover{
     background-color: transparent;

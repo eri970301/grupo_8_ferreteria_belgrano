@@ -1,16 +1,7 @@
-:root {
-    --main-color: #de2e30;
-    --second-color: #000;
-    --accent-color: #fff;
-    --second-accent-color: #eadede
-}
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
 .login_main {
     display: flex;
     justify-content: center;
     height: 100vh;
-
 }
 
 .login_form {
@@ -76,5 +67,4 @@ label {
         margin: 0px;
         border-radius: 0%;
     }
-
 }
