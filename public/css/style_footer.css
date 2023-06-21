@@ -64,7 +64,7 @@ footer h4{
         width: 50%;
     }
     .footer_about{
-        width: 55%;
+        width: 50%;
     }
     .footer_about p, .footer_about h4{
         text-align: initial;
@@ -89,7 +89,7 @@ footer h4{
     .footer_logo_img{
         width: 160px;
         padding-bottom: 0px;
-        height: -webkit-fill-available;
+        height: auto;
     }
     .footer_nav{
         display: flex;

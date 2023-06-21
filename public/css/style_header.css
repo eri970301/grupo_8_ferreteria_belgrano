@@ -76,6 +76,7 @@ header {
     .top_bar nav ul a{
         text-decoration-color: var(--accent-color);
         text-underline-offset: 2px;
+        min-width: 110px;
     }
     .mobile_bar {
         display: none
@@ -132,6 +133,6 @@ header {
         margin: 0 30px 0 30px
     }
     .top_bar nav ul{
-        gap: 30px;
+        gap: 10px;
     }
   }
