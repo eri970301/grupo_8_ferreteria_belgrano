@@ -2,44 +2,59 @@
     <body>
         <%- include('../partials/header.ejs') %>
                 <!---Sección productos recomendados-->
+       
+
+                <div class="product_description">
+                  <h2>Detalle del usuario</h2>
+                <p class="product-detail-description">
+<div class="container">
+
+
+    <div class="product-detail">
+      <img src="/img/users/<%= user.image %>">
+
+ 
          
-                <div class="recomended_products_title">
-                    <h2>ELIMINAR USUARIO FERRETERIA BELGRANO</h2><a href="http://" class="product_link_title">Ver más</a>
-                </div>
-          <section class="edit_form">
-                      <article class="product_carousel">
-                        <div class="product_carousel_card">
-                          <h3><%= user.firstName %></h3>
-                          <h4><%= user.type %></h4>
-                        </div>
-                      </article>
-                    
-                        <div class="products_title">
-                      <form action="/users/delete/<%= user.iduser %>"method="POST">
-                        <BUtton type="submit" class="detail_button"">ELIMINAR USUARIO</BUtton>   
-                      </form>
-					  
-					  <form action="/users/edit/<%= user.iduser %>"method="GET">
-					  <BUtton type="submit" class="detail_button"">EDITAR USUARIO</BUtton> 
-                    </form>
-					</div>
-          </section>
-          <section>
-        
+    <div class="container_desktop">
+    
+        <h2 class="products-title">
+          <%= user.lastName %>
+       
+        </h2>
 
-				<ul class="payment">
-					<li class="payment_tabs_tab">
-						<i class="fas fa-credit-card"></i>
-						<p>Pagá en 12 cuotas sin interes</p>
-					</li>
-					<li class="payment_tabs_tab">
-						<i class="fas fa-store"></i>
-						<p>Retiro gratis en locales del vendedor</p>
-					</li>
-				</ul>
+    
+        <div class="product-detail-price">
+          <h2>  <%=  user.type %></h2>
+        </div>
 
-              </section>
-            <!---Footer-->
-            <%- include('../partials/footer.ejs') %>
-              </body>
+        <h2 class="product-detail-price">
+          <%=  user.email %>
+        </h2>
+            <div class="products_title">
+              <form action="/users/delete/<%= user.iduser %>"method="POST">
+                <BUtton type="submit" class="detail_button"">ELIMINAR USUARIO</BUtton>   
+              </form>
+    
+    <form action="/users/edit/<%= user.iduser %>"method="GET">
+    <BUtton type="submit" class="detail_button"">EDITAR USUARIO</BUtton> 
+            </form>
+            </form>
+    </div>
+  </div>
+
+ 
+  </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
 </html>
+</html>
+</body>
+</body>
+</section>
+
+<%- include('../partials/footer.ejs') %>

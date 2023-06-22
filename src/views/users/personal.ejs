@@ -1,4 +1,8 @@
-<head>
+
+<%- include('../partials/head.ejs') %>
+    <body>
+      
+                <!---Sección productos recomendados--><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +20,7 @@
         <div class="recomended_products_title">
             <a href="http://" class="product_link_title">Ver más</a>
         </div>
+        
         <section class="product_recomended">
             <% users.forEach(user => { 
                 let finalPrice = (user.price * ((100 - user.discount) / 100)).toFixed(0)

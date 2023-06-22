@@ -8,9 +8,11 @@
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    margin: 50px;;
 }
 .product-detail-img{
     margin-bottom: 30px;
+    
 }
 .buy-now-button{
     text-decoration: none;
