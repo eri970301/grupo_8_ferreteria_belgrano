@@ -18,6 +18,13 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         }
         
-    const User =  sequelize.define(alias, cols, config);
-    return User
+    const Product =  sequelize.define(alias, cols, config);
+
+    Product.associate = function(models){
+        Product.belongsTo(models.Categorys, {
+            as: "categorys",
+            foreignKey: "idcategory"
+        })
+    }
+    return Product
 }
