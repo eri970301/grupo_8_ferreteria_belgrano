@@ -58,7 +58,7 @@ body {
     margin: 20px auto;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     max-width: 1520px;
 }
 .product_recomended h2{
