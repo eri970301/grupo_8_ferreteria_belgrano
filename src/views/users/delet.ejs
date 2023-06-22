@@ -7,15 +7,15 @@
                 <div class="product_description">
                   <h2>Detalle del usuario</h2>
                 <p class="product-detail-description">
-<div class="container">
 
+                  <div class="container">
 
-    <div class="product-detail">
-      <img src="/img/users/<%= user.image %>">
+                    <div class="product-detail">
+                      <div>
+      <img src="/img/users/<%= user.image %>" class="product-detail-img">
+    </div>
+      <div class="container_desktop">
 
- 
-         
-    <div class="container_desktop">
     
         <h2 class="products-title">
           <%= user.lastName %>
@@ -30,30 +30,43 @@
         <h2 class="product-detail-price">
           <%=  user.email %>
         </h2>
-            <div class="products_title">
-              <form action="/users/delete/<%= user.iduser %>"method="POST">
-                <BUtton type="submit" class="detail_button"">ELIMINAR USUARIO</BUtton>   
-              </form>
-    
-    <form action="/users/edit/<%= user.iduser %>"method="GET">
-    <BUtton type="submit" class="detail_button"">EDITAR USUARIO</BUtton> 
-            </form>
-            </form>
-    </div>
-  </div>
 
- 
-  </p>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div></div>
-</div>
-</html>
-</html>
-</body>
+
+
+        <div class="btn">
+          <form action="/users/edit/<%= user.iduser %>"method="GET">
+            <BUtton  type="submit" class="detail_button"">EDITAR USUARIO</BUtton> 
+          </form>
+        </div>
+
+        
+        <div class="btn">
+          <form id="myForm" method="POST">
+          <form action="/users/edit/<%= user.iduser %>"method="GET">
+            <button type="button" onclick="myFunction()"class="detail_button" >Eliminar usuario</button>
+          </form>
+        </div>
+       
+        
+
+
+        <script>
+          function myFunction() {
+            if (confirm("¿Seguro que desea eliminar este usuario?")) {
+              alert("USUARIO ELIMINADO");
+              document.getElementById("myForm").action = "/users/delete/<%= user.iduser %>";
+              document.getElementById("myForm").submit();
+              
+            } else {
+              window.location.href = "/";
+            }
+          }
+          </script>
+          	</div>
+          </div>
+          </div>
+          </div>
+  </html>
 </body>
 </section>
 

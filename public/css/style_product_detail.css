@@ -4,6 +4,11 @@
 .products-title{
     margin: 30px 10px;
 }
+.btn{
+    margin-bottom: 30px;
+    justify-content: center;
+    margin: 50px;; 
+}
 .product-detail-price{
     margin-bottom: 30px;
     display: flex;
@@ -12,6 +17,14 @@
 }
 .product-detail-img{
     margin-bottom: 30px;
+    
+}
+.eliminar{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    width: 80%;
     
 }
 .buy-now-button{
