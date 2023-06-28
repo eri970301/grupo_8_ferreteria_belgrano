@@ -14,19 +14,29 @@
  }
 .register_form{
     margin: 5%;
-    padding: 3%;
+    padding: 1%;
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 40%;
+    height: 60%;
     border-radius: 5%;
-    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
-    background-color: #fff;
+    background-color: white;
+ 
+}
+.Titulo{
+    margin-top: 3%;
+}
+.opcion{
+   width: 100%;
+   justify-content: left;
 }
 
 #Formulario{
     display: flex;
     flex-direction: column;
     width:90%;
+    
+    
  }
 
  label{
@@ -37,7 +47,9 @@
 .boton{
     width: 250px;
     height: 30px;
-    color: darkolivegreen;
+    color: rgb(255, 255, 255);
+    margin-top: 10%;
+    font-weight: bold;
 }
  @media(min-width: 768px) { 
     #Button{

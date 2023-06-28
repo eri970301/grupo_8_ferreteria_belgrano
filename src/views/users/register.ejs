@@ -12,15 +12,15 @@
                     } %>
                     <label for="firstName">Nombre *</label>
                     <input type="text" id="firstName" name="firstName" placeholder="Indique su nombre" class="Datos" value="<%= locals.old && old.firstName ? old.firstName : '' %>">
-                    <label for="lastName">Apellido</label>
+                    <label for="lastName" class="Titulo">Apellido</label>
                     <input type="text" id="lastName" name="lastName" placeholder="Indique su apellido" class="Datos" value="<%= locals.old && old.lastName ? old.lastName : '' %>">
-                    <label for="email">Email</label>
+                    <label for="email" class="Titulo">Email</label>
                     <input type="email" id="email" name="email" placeholder="Indique su email" class="Datos" value="<%= locals.old && old.email ? old.email : '' %>">
-                    <label for="password">Contraseña</label>
+                    <label for="password" class="Titulo">Contraseña</label>
                     <input type="password" name="password" placeholder="Cree aquí su contraseña" class="Datos">
                     <div>
-                        <label for="role" >Rol:</label>
-                        <select name="role">
+                        <label for="role"  class="Titulo">Rol:</label>
+                        <select name="role"  class="opcion">
                             <option value="">Elegí</option>
                             <% let role = ['Administrador', 'Cliente']; %>
                             <% for (const oneRole of role){ %>
@@ -29,11 +29,11 @@
                         </select>
                     </div>
                     <div>
-                        <label for="imagen">Imagen de usuario</label>
+                        <label for="imagen" class="Titulo">Imagen de usuario</label>
                         <input type="file" id="avatar" name="avatar">
                     </div>
                     <div id="Button">
-                    <button class="boton" >REGISTRARSE</button>
+                    <button class="boton" >Registrarse</button>
                     </div>
                 </div>
             </form>

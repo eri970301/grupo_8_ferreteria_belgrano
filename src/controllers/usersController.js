@@ -9,7 +9,7 @@ const db = require('../database/models');
 
 const users = {
     login: (req, res) => {
-        return res.render('users/login')
+         return res.render('users/login') 
     },
 
     
@@ -20,17 +20,17 @@ const users = {
         .then(users => {
           if (!users) {
             
-            return res.render('users/login');
+             return res.render('users/login'); 
           }
     
           if (bcrypt.compareSync(password, users.password)) {
               res.cookie('recordame', users.email, { maxAge: 60000 });
-              return res.render('users/admi', {users : [users] });
+              return res.render('users/Cliente', {users : [users] });
             
           }
     
-          
-          return res.render('users/login');
+        
+          return res.render('users/login'); 
         })
         .catch(error => {
           console.error('Error en processLogin:', error);
@@ -74,8 +74,8 @@ const users = {
       },
       
     personal: (req, res) => {
-        db.Users.findAll()
-        
+              db.Users.findAll()
+    
           .then(users => {
            
             return res.render('users/personal', { users: users });
@@ -115,22 +115,7 @@ const users = {
               console.error('Error al obtener el detalle del producto:', error);
               res.redirect('/products');
           });
-  },
-                
 
- 
-    detailDG: (req, res) => {
- 
-        let id = req.params.id
-
-        const users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-        let userToSend = users.find(user => user.id == id)
-
-        res.render('delet', {userToSend})
-    /*     console.log(userToSend) */
-        
-       /*  res.render("login") */
-  /*       res.render("Admi", {user: userToSend}) */
 
 
     }, 

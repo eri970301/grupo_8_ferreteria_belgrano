@@ -15,39 +15,26 @@
 <body>
   <%- include('../partials/header.ejs') %>
     <!---Sección productos recomendados-->
-
+    <% users.forEach(user=> {
+        let finalPrice = (user.price * ((100 - user.discount) / 100)).toFixed(0)
+        %>
     <main>
       <div class="recomended_products_title">
         <% if (users.type==[0]) { %>
           <h2>Hola <%= users[0].type %>
           </h2>
-          <% } else { %>
-            <h2>Bienvenido Administrador</h2>
+          <% } else { %><h3>
+            
+          </h3>
+            <h2>Bienvenido cliente <%= user.firstName %> </h2>
             <% } %><a href="http://" class="product_link_title">Ver más</a>
       </div>
 
       <section class="product_recomended">
-        <% users.forEach(user=> {
-          let finalPrice = (user.price * ((100 - user.discount) / 100)).toFixed(0)
-          %>
+       
           <a href="/users/detail/<%= user.id %>">
             <article class="product_carousel">
-              <div class="product_carousel_card">
-                <img src="../../../public/img/users/<%= user.image %>">
-
-                <h3>
-                  <%= user.firstName %>
-                </h3>
-                <h4>
-                  <%= user.lastName %>
-                </h4>
-                <h5>
-                  <%= user.email %>
-                </h5>
-                <h6>
-                  <%= user.type %>
-                </h6>
-              </div>
+          
             </article>
 
           </a>
