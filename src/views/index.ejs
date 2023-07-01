@@ -15,7 +15,36 @@
             <main>
                 <!---Sección banner-->
                 <section class="main_banner">
-                    <img src="/img/banner.jpg" alt="" width="100%">
+
+                    <img name="slider" width="100%">
+                    <script>
+                        window.addEventListener("load", function(){
+            
+                            var imagenes = [];
+                            imagenes[0]="/img/PRUEBA.png"
+                            imagenes[1]="/img/banner11.webp"
+                            imagenes[2]="/img/banner10.webp"
+                            imagenes[3]="/img/banner12.webp"
+                            imagenes[4]="/img/PRUEBA.png"
+                            
+                            var IndiceImagenes = 0;
+            
+                            function cambiarImagenes(){
+                                document.slider.src = imagenes[IndiceImagenes];
+                                if(IndiceImagenes<4){
+                                    IndiceImagenes++;
+                                }else{
+                                    IndiceImagenes=0;
+                                }
+                            }
+                            setInterval(cambiarImagenes,2000);
+                        })
+                    </script>
+
+
+
+
+
                 </section>
                 <!---Sección medios de pago-->
                 <section class="payment">
@@ -58,7 +87,7 @@
                 </section>
                 <!---Sección productos recomendados-->
                 <div class="recomended_products_title">
-                    <h2>PEDRO MADERAS Y HERRAMIENTAS</h2><a href="http://" class="product_link_title">Ver más</a>
+                    <h2>FERRETERIA BELGRANO</h2><a href="http://" class="product_link_title">Ver más</a>
                 </div>
                 <section class="product_recomended">
                     <% products.forEach(product => { 
