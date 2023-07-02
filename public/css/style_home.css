@@ -115,12 +115,18 @@ body {
     -moz-box-shadow: 9px 10px 32px -19px rgba(0, 0, 0, 0.75);
     box-shadow: 9px 10px 32px -19px rgba(0, 0, 0, 0.75);
 }
-.category_card a p{
+.category_card p{
     color: var(--second-color);
     font-size: 20px;
 }
+.category_card p::first-letter{
+    text-transform: uppercase;
+}
+.category_title_detail::first-letter{
+    text-transform: uppercase;
+}
 .category_card a{
-    text-decoration-color: var(--second-color);
+    text-decoration: none
 }
 .carousel_footer{
     margin: 30px 20px 20px 20px;
@@ -195,6 +201,8 @@ color: var(--main-color);
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+        max-width: 1520px;
+        margin: auto;
     }
     .category_card{
         margin-bottom: 0px;
