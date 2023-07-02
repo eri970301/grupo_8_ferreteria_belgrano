@@ -4,7 +4,9 @@ const db = require('../database/models');
 
 const controller = {
     index: (req, res) => {
-        db.Products.findAll().then((product) =>{
+        db.Products.findAll({
+            limit: 5,
+        }).then((product) =>{
             db.Categorys.findAll({
                 limit: 4
             }).then((category) => {
