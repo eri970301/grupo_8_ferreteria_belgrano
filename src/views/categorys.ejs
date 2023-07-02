@@ -1,0 +1,24 @@
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <%- include('partials/header.ejs') %>
+        <section class="category">
+            <div class="category_title">
+                <h2>Encontrá el producto que buscás</h2>
+            </div>
+            <article class="category_cards">
+                <% category.forEach(category => { 
+                %>
+                <div class="category_card">
+                    <a href="http://">
+                        <img src="/img/<%= category.image %>" alt="">
+                        <p><%= category.nombre %></p>
+                    </a>
+                </div>
+              <% }) %>
+            </article>
+        </section>
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>

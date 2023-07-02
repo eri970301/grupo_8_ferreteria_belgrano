@@ -15,9 +15,6 @@ module.exports = (sequelize, dataTypes) => {
             image: {
                 type: dataTypes.STRING(200)
             },
-            category: {
-                type: dataTypes.STRING(200)
-            },
             type: {
                 type: dataTypes.STRING(200)
             },
@@ -26,6 +23,9 @@ module.exports = (sequelize, dataTypes) => {
             },
             discount: {
                 type: dataTypes.DECIMAL(9)
+            },
+            categoryId: {
+                type: dataTypes.INTEGER
             }
         };
         let config = {
@@ -34,11 +34,11 @@ module.exports = (sequelize, dataTypes) => {
         }
         
     const Product =  sequelize.define(alias, cols, config);
-    /*Product.associate = function(models){
-        Product.belongsTo(models.Category, {
-            foreignKey: "category",
+    Product.associate = function(models){
+        Product.belongsTo(models.Categorys, {
+            foreignKey: "categoryId",
             as: "categorys"
         })
-    }*/
+    }
     return Product
 }

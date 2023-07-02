@@ -31,18 +31,18 @@
         </section>
         <section class="bottom_bar">
                 <a href="/products">Productos</a>
-
-            <label for="">Categorías
-                <i class="fa-solid fa-chevron-down"></i>
-                <select name="" id="" class="category_header">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                </select>
-            </label>
-
+            <div class="category_dropdown">
+                <label for="category_dropdown"> Categorías<i class="fa-solid fa-chevron-down"></i></label>
+                    <select name="category_dropdown" id="category_dropdown" class="category_header" onchange='window.location.href=this.value'>
+                        <option value=""></option>
+                        <option value="/products/category/1">Electrodomésticos</option>
+                        <option value="/products/category/2">Herramientas</option>
+                        <option value="/products/category/3">Industrial</option>
+                        <option value="/products/category/4">Jardinería</option>
+                        <option value="/products/category/5">Protección</option>
+                        <option value="/products/category/6">Construcción</option>
+                    </select>
+            </div>
         </section>
         <section class="mobile_bar">
             <i class="fa-solid fa-bars"></i>

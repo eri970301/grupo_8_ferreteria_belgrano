@@ -18,11 +18,11 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
     const Category = sequelize.define(alias, cols, config); // Cambia el nombre de la constante User a Category
-   /* Category.associate = function(models){
-        Category.hasMany(models.Product, {
-            foreignKey: "category",
+   Category.associate = function(models){
+        Category.hasMany(models.Products, {
+            foreignKey: "categoryId",
             as: "products"
         })
-    } */
-    return Category;
+    } 
+    return Category
 }

@@ -11,6 +11,34 @@ const controller = {
             return res.render('products', { products: product })
         })
     },
+    category: (req, res) => {
+        db.Categorys.findAll()
+        .then((category => {
+            return res.render('categorys', {category})
+        }))
+    },
+    categoryDetail: (req, res) => {
+        const idcategory = req.params.idcategory
+        db.Categorys.findByPk(idcategory, {
+            include: [{
+                model: db.Products,
+                as: 'products'
+            }]
+        })
+        .then((category => {  
+            console.log(category)
+           if(!category){
+                return res.status(404).send('Categoria no encontrada');
+            }
+            const products = category.products;
+            
+            return res.render('categoryDetail', {products, category})
+        }))
+        .catch((error) => {
+            console.error('Error al obtener los productos de la categoría:', error);
+            return res.status(500).send('Error al obtener los productos de la categoría');
+          });
+    },
     search: (req, res) =>{
         let productSearch = req.query.query.toLowerCase();
         let productsResults = [];

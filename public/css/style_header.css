@@ -29,6 +29,9 @@ header {
 .logo:not(.top_bar){
     display: flex;
 }
+.category_dropdown{
+    position: relative;
+}
 @media(min-width: 768px) {
     .top_bar_search, nav, .top_bar_icons, .bottom_bar{
         display: flex;
@@ -104,22 +107,27 @@ header {
         color: var(--accent-color);
     }
     .bottom_bar label{
-        position: relative;
         margin-right: 30px;
     }
     .bottom_bar select{
         appearance: none;
         outline: 0;
-        border: 0;
+        border: none;
         box-shadow: none;
-        position: absolute;
-        color: #fff;
+        color: #000;
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 16px;
         background-color: transparent;
-        background-image: none;
         cursor: pointer;
-        right: 0;
+        left: 0;
+        top:0;
         width: 100%;
-        margin-top: 10px;
+        padding-top: 20px;
+        position: absolute;
+      }
+      .bottom_bar option{
+        background-color: var(--second-accent-color);
       }
         .header_form {
             display: contents;

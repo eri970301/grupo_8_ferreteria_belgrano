@@ -23,5 +23,7 @@ router.patch('/edit/:id',upload.single('productImage'), productsController.updat
 router.get('/cart',productsController.cart);
 router.get('/detail/:id', productsController.detail); 
 router.get('/search', productsController.search);
+router.get('/category', productsController.category);
+router.get('/category/:idcategory', productsController.categoryDetail); 
 
 module.exports = router

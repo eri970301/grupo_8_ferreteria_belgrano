@@ -1,0 +1,28 @@
+<%- include('partials/head.ejs') %>
+
+    <body>
+        <%- include('partials/header.ejs') %>
+        <div class="products_title">
+          <h1><%= category.nombre %></h1>
+          <a href="/products/create">Crear Producto</a>
+        </div>
+                <section class="product_recomended">
+                    <% products.forEach(product => { 
+                      let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+                      %>
+                      <a href="/products/detail/<%= product.idproduct %>">
+                        <article class="product_carousel">
+                          <div class="product_carousel_card">
+                            <img src="/img/<%= product.image %>">
+                            <h3>$<%= finalPrice %></h3>
+                            <p>Descuento: <%= product.discount %>%</p>
+                            <h4><%= product.name %></h4>
+                          </div>
+                        </article></a>
+                      <% }) %>
+                </section>
+            <!---Footer-->
+            <%- include('partials/footer.ejs') %>
+    </body>
+
+</html>
