@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
+        nombre: {
             type: DataTypes.STRING(45) // Utiliza DataTypes.STRING en lugar de DataTypes.VARCHAR
         },
         image: {

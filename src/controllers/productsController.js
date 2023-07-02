@@ -52,7 +52,7 @@ const controller = {
             name: req.body.name,
             description: req.body.description,
             image: req.file ? req.file.filename : 'default-image.png',
-            category: req.body.category,
+            category: 1,
             type: req.body.type,
             price: parseInt(req.body.price),
             discount: parseInt(req.body.discount),

@@ -112,38 +112,15 @@
                         <a href="http://">Ver todas las categorías</a>
                     </div>
                     <article class="category_cards">
-
+                        <% category.forEach(category => { 
+                        %>
                         <div class="category_card">
                             <a href="http://">
-                                <img src="/img/electrodomesticos.jpg" alt="">
-                                <p>Electrodomésticos</p>
+                                <img src="/img/<%= category.image %>" alt="">
+                                <p><%= category.nombre %></p>
                             </a>
                         </div>
-                        <div class="category_card">
-                            <a href="http://">
-                                <img src="/img/herramientas.jpg" alt="">
-                                <p>Herramientas</p>
-                            </a>
-                        </div>
-                        <div class="category_card">
-                            <a href="http://"> <img src="/img/industrial.jpg" alt="">
-                                <p>Industrial</p>
-                            </a>
-                        </div>
-                        <div class="category_card">
-                            <a href="http://">
-                                <img src="/img/jardineria.jpg" alt="">
-                                <p>Jardinería</p>
-                            </a>
-
-                        </div>
-                        <div class="category_card">
-                            <a href="http://">
-                                <img src="/img/proteccion.jpg" alt="">
-                                <p>Elementos de protección</p>
-                            </a>
-
-                        </div>
+                      <% }) %>
                     </article>
                 </section>
                 <section class="carousel_footer">
