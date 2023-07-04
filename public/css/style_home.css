@@ -51,7 +51,7 @@ body {
     color: var(--second-color);
 }
 .recomended_products_title{
-    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .product_recomended{
     display: flex;

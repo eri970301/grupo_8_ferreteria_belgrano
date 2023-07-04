@@ -1,0 +1,61 @@
+<%- include('../partials/head.ejs') %>
+    <body>
+        <%- include('../partials/header.ejs') %>
+                <!---Sección productos recomendados-->
+       
+
+                <div class="product_description">
+                  <h2>Detalle del usuario</h2>
+                <p class="product-detail-description">
+
+                  <div class="container">
+
+                    <div class="product-detail">
+                      <div>
+      <img src="/img/users/<%= user.image %>" class="product-detail-img">
+    </div>
+      <div class="container_desktop">
+
+    
+        <h2 class="products-title">
+          <%= user.lastName %>
+       
+        </h2>
+
+    
+        <div class="product-detail-price">
+          <h2>  <%=  user.type %></h2>
+        </div>
+
+        <h2 class="product-detail-price">
+          <%=  user.email %>
+        </h2>
+
+
+
+      
+       
+        
+
+
+        <script>
+          function myFunction() {
+            if (confirm("¿Seguro que desea eliminar este usuario?")) {
+              alert("USUARIO ELIMINADO");
+              document.getElementById("myForm").action = "/users/delete/<%= user.iduser %>";
+              document.getElementById("myForm").submit();
+              
+            } else {
+              window.location.href = "/";
+            }
+          }
+          </script>
+          	</div>
+          </div>
+          </div>
+          </div>
+  </html>
+</body>
+</section>
+
+<%- include('../partials/footer.ejs') %>
