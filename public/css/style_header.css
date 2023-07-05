@@ -41,9 +41,15 @@ header {
     top: 0;
     width: 100vh;
     height: 100vh;
-    display: none;
     justify-content: center;
     align-items: center;
+    transition: 0.3s all ease;
+}
+.not_hidden{
+    display: flex;
+}
+.hidden{
+    display: none;
 }
 .dropdown_menu .close_button{
     color: #000;
@@ -78,8 +84,8 @@ header {
 .cat_drop:hover{
     transform: none;
 }
-.dropdown_menu li:hover > .cat_sub_menu {
-    display: block;
+.close_button{
+    font-size: 22px;
 }
 @media(min-width: 768px) {
     .top_bar_search, nav, .top_bar_icons, .bottom_bar{
