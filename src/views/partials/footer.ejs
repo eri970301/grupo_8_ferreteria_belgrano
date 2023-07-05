@@ -17,6 +17,7 @@
                     <a href="/users/personal">
                         <li>Personal</li>
                     </a>
+                    
                 </ul>
             </div>
         </div>
@@ -32,3 +33,32 @@
         </div>
     </div>
 </footer>
+<script>
+    const dropdownOpen = document.getElementById('dropdown_menu');
+    const closeButton = document.getElementById('close_button');
+    const mobile = document.getElementById('mobile_bar');
+    const submenuParent = document.getElementById('cat_drop');
+    const submenu = document.getElementById('cat_sub_menu');
+    document.addEventListener('DOMContentLoaded', function() {
+        mobile.addEventListener('click', function(e) {
+            console.log('mobile clickeado')
+            e.preventDefault();
+            dropdownOpen.classList.add('not_hidden');
+            dropdownOpen.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', function(e) {
+            console.log('close clickeado')
+            e.preventDefault();
+            if (dropdownOpen.classList.contains('not_hidden')) {
+            dropdownOpen.classList.remove('not_hidden');
+            dropdownOpen.classList.add('hidden');
+            }
+        });
+        submenuParent.addEventListener('click', function(e) {
+            console.log('close clickeado')
+            e.preventDefault();
+            submenu.style.display = 'block'
+        });
+    });
+</script>

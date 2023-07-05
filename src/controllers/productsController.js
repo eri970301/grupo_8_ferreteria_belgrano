@@ -71,8 +71,12 @@ const controller = {
     edit: (req, res) => {
         let id = req.params.id;
         db.Products.findByPk(id)
+        
             .then((product) => {
-                res.render('product-edit-form', { product: product })
+                if (req.admi && req.cookies.admi) {
+                    res.render('product-edit-form', { product: product })
+                }else {}
+                res.render('product-edit-formClient', { product: product })
             })
     },
     update: (req, res) => {
@@ -115,7 +119,12 @@ const controller = {
         db.Products.findByPk(id)
             .then(product => {
                 console.log(product)
-                res.render('detail', { product:product });
+
+                if (req.cookies && req.cookies.admi) {
+                    res.render('detail', { product:product });
+                }else{
+                    res.render('detailClient', { product:product });
+                }
             })
             .catch(error => {
                 console.error('Error al obtener el detalle del producto:', error);

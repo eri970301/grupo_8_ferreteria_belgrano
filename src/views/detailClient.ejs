@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head.ejs', {title: 'Detalle Producto' }) %>
+
+	<body>
+		<%- include('partials/header.ejs') %>
+			<!-- product detail -->
+			<div class="container">
+				<div class="products_title_mobile">
+					<h2 class="products-title">
+						<%= product.name %>
+					</h2>
+				</div>
+				<div class="product-detail">
+					<img src="/img/<%= product.image %>" alt="product image" class="product-detail-img">
+					<div class="container_desktop">
+						<div class="products_title_desktop">
+							<h2 class="products-title">
+								<%= product.name %>
+							</h2>
+						</div>
+						<% if(product.discount> 0) {
+							let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+							%>
+							<div class="product-detail-price">
+								<h2> $ <%= product.price %> / <%= product.discount %>% OFF</h2>
+							</div>
+
+							<h2 class="product-detail-price">
+								$<%= finalPrice %>
+							</h2>
+							<% } else { %>
+								<h2 class="product-detail-price">
+									$<%= product.price %>
+								</h2>
+								<% } %>
+									<ul class="payment">
+										<li class="payment_tabs_tab">
+											<i class="fas fa-credit-card"></i>
+											<p>Pagá en 12 cuotas sin interes</p>
+										</li>
+										<li class="payment_tabs_tab">
+											<i class="fas fa-store"></i>
+											<p>Retiro gratis en locales del vendedor</p>
+										</li>
+									</ul>
+
+									<button class="detail_button">Comprar Ahora</button>
+									
+									</form>
+					</div>
+				</div>
+				<div class="product_description">
+					<h2>Detalle de producto</h2>
+				<p class="product-detail-description">
+					<%= product.description %>
+				</p>
+				</div>
+			</div>
+			<!-- /product detail -->
+
+			<!-- footer -->
+			<%- include('partials/footer.ejs') %>
+				<!-- /footer -->
+
+	</body>
+
+</html>

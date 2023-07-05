@@ -1,4 +1,17 @@
 <head>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+      <script type="text/javascript">
+      $(document).ready(function() {
+          setTimeout(function() {
+              $(".loader").fadeOut(1500);
+          },2000);
+      });
+      </script>
+      </head>
+    <div class="loader">
+        <img src="/img/giff.gif" alt="">
+      </div>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +25,7 @@
 
     <body>
         <%- include('partials/header.ejs') %>
+        
             <main>
                 <!---Sección banner-->
                 <section class="main_banner">
@@ -40,11 +54,6 @@
                             setInterval(cambiarImagenes,2000);
                         })
                     </script>
-
-
-
-
-
                 </section>
                 <!---Sección medios de pago-->
                 <section class="payment">
@@ -130,6 +139,7 @@
                 </section>
             </main>
             <%- include('partials/footer.ejs') %>
+           
     </body>
 
 </html>

@@ -32,6 +32,61 @@ header {
 .category_dropdown{
     position: relative;
 }
+.dropdown_menu{
+    background-color: var(--second-accent-color);
+    font-family: 'Lato';
+    padding: 20px 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all ease;
+}
+.not_hidden{
+    display: flex;
+}
+.hidden{
+    display: none;
+}
+.dropdown_menu .close_button{
+    color: #000;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+.dropdown_menu .drop{
+    list-style: none;
+    padding: 0;
+}
+.dropdown_menu .drop a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    line-height: 2;
+}
+.dropdown_menu .drop li{
+    padding: 0 20px;
+}
+.dropdown_menu li:not(.cat_drop):hover{
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+.cat_sub_menu{
+    display: none;
+    list-style: none;
+}
+.cat_drop i{
+    font-size: 16px;
+}
+.cat_drop:hover{
+    transform: none;
+}
+.close_button{
+    font-size: 22px;
+}
 @media(min-width: 768px) {
     .top_bar_search, nav, .top_bar_icons, .bottom_bar{
         display: flex;
