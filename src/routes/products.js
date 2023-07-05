@@ -3,6 +3,8 @@ let router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const productsController = require('../controllers/productsController')
+const { productValidator } = require('../../public/js/registerValidator')
+const { validateResult } = require('../middlewares/validationMiddleware')
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {

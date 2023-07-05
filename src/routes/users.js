@@ -3,7 +3,9 @@ let router = express.Router();
 const usersController = require('../controllers/usersController')
 const multer = require('multer');
 const path = require('path');
-const { body } = require('express-validator') ;
+const { check } = require('express-validator');
+const { validations } = require('../../public/js/registerValidator')
+const { validateResult } = require('../middlewares/validationMiddleware')
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -13,26 +15,19 @@ let storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
 })
-const upload = multer({ storage: storage })
-
-const validations = [
-    body('firstName').notEmpty().withMessage('Ingresa un nombre valido'),
-    body('lastName').notEmpty().withMessage('Ingresa un apellido valido'),
-    body('email').isEmail().withMessage('Ingresa un email valido'),
-    body('password').notEmpty().withMessage('Ingresa una contraseña'),
-    body('role').notEmpty().withMessage('Ingresa un rol')
-]
+const upload = multer({ storage: storage });
 router.get('/login', usersController.login);
-router.post('/login', usersController.processLogin);     
+router.post('/login', usersController.processLogin);
 //ruta de tipo get /users/registro
 router.get('/register', usersController.registro);
-router.post('/register', upload.single('avatar'), validations, usersController.guardarUsuario)  
-router.get('/personal', usersController.personal);  
-router.get('/detail/:id', usersController.detail);  
-router.get('/delete', usersController.Eliminar);  
+router.post('/register', upload.single('avatar'), validations, (req, res) => {usersController.guardarUsuario(req, res);});
+router.get('/personal', usersController.personal);
+router.get('/detail/:id', usersController.detail);
+router.get('/delete', usersController.Eliminar);
 router.post('/delete/:id', usersController.Eliminar);
-router.get('/edit/:id', usersController.edit);  
-module.exports = router 
+router.get('/edit/:id', usersController.edit);
+
+module.exports = router
 
 
 

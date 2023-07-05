@@ -124,7 +124,7 @@ const users = {
         console.log(users)
       })
       .catch(error => {
-        console.error('Error al obtener el detalle del producto:', error);
+        console.error('Error al obtener el detalle del usuario:', error);
         res.redirect('/products');
       });
 

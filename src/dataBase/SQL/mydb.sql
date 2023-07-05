@@ -86,7 +86,7 @@ CREATE TABLE `product_category` (
   CONSTRAINT `id_product` FOREIGN KEY (`idproduct`) REFERENCES `product` (`idproduct`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
+ 
 --
 -- Dumping data for table `product_category`
 --

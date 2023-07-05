@@ -1,31 +1,35 @@
 <%- include('../partials/head.ejs') %>
+
     <body>
         <%- include('../partials/header.ejs') %>
             <main class="register_main">
-            <form action="/users/register" method="post" enctype="multipart/form-data" class="register_form">
-                <div id="Formulario">
-                    <h1>Formulario de Registro</h1>
-                    <% if(locals.errors){
-                        errors.forEach(error => { %>
-                            <p><%= error.msg %></p>
-                            <% })
-                    } %>
+                <form action="/users/register" method="post" enctype="multipart/form-data" class="register_form">
+                    <div id="Formulario">
+                        <h1>Formulario de Registro</h1>
+                    </div>
+                    <script src="/js/registerValidator.js"></script>
                     <label for="firstName">Nombre *</label>
-                    <input type="text" id="firstName" name="firstName" placeholder="Indique su nombre" class="Datos" value="<%= locals.old && old.firstName ? old.firstName : '' %>">
+                    <input type="text" id="firstName" name="firstName" placeholder="Indique su nombre" class="Datos"
+                        value="<%= locals.old && old.firstName ? old.firstName : '' %>">
                     <label for="lastName" class="Titulo">Apellido</label>
-                    <input type="text" id="lastName" name="lastName" placeholder="Indique su apellido" class="Datos" value="<%= locals.old && old.lastName ? old.lastName : '' %>">
+                    <input type="text" id="lastName" name="lastName" placeholder="Indique su apellido" class="Datos"
+                        value="<%= locals.old && old.lastName ? old.lastName : '' %>">
                     <label for="email" class="Titulo">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Indique su email" class="Datos" value="<%= locals.old && old.email ? old.email : '' %>">
+                    <input type="email" id="email" name="email" placeholder="Indique su email" class="Datos"
+                        value="<%= locals.old && old.email ? old.email : '' %>">
                     <label for="password" class="Titulo">Contraseña</label>
-                    <input type="password" name="password" placeholder="Cree aquí su contraseña" class="Datos">
+                    <input type="password" id="password" name="password" placeholder="Cree aquí su contraseña"
+                        class="Datos">
                     <div>
-                        <label for="role"  class="Titulo">Rol:</label>
-                        <select name="role"  class="opcion">
+                        <label for="role" class="Titulo">Rol:</label>
+                        <select name="role" class="opcion">
                             <option value="">Elegí</option>
-                            <% let role = ['Administrador', 'Cliente']; %>
-                            <% for (const oneRole of role){ %>
-                                <option value="<%= oneRole %>" <%= locals.old && old.category == 'oneRole' ? 'selected' : '' %> > <%= oneRole %> </option>
-                            <% } %> 
+                            <% let role=['Administrador', 'Cliente' ]; %>
+                                <% for (const oneRole of role){ %>
+                                    <option value="<%= oneRole %>" <%=locals.old && old.category=='oneRole' ? 'selected'
+                                        : '' %> > <%= oneRole %>
+                                    </option>
+                                    <% } %>
                         </select>
                     </div>
                     <div>
@@ -33,15 +37,15 @@
                         <input type="file" id="avatar" name="avatar">
                     </div>
                     <div id="Button">
-                    <button class="boton" >Registrarse</button>
+                        <button class="boton">Registrarse</button>
                     </div>
-                </div>
-            </form>
-        </main>
+                    </div>
+                </form>
+            </main>
             <%- include('../partials/footer.ejs') %>
     </body>
 
-</html>
-</body>
+    </html>
+    </body>
 
-</html>
+    </html>

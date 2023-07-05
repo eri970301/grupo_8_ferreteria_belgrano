@@ -73,7 +73,7 @@ const controller = {
         db.Products.findByPk(id)
         
             .then((product) => {
-                if (req.cookies && req.cookies.admi) {
+                if (req.admi && req.cookies.admi) {
                     res.render('product-edit-form', { product: product })
                 }else {}
                 res.render('product-edit-formClient', { product: product })
