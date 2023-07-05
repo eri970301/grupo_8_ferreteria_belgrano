@@ -14,5 +14,20 @@
     <link rel="stylesheet" href="/css/style_login.css">
     <link rel="stylesheet" href="/css/style_product_detail.css">
     <link rel="stylesheet" href="/css/style_personal.css">
+    <script>
+        const openMobile = document.getElementById('.mobile_bar');
+        const dropdownOpen = document.getElementById('.dropdown_menu');
+        const closeDropdown = document.getElementById('.close_button');
+        if(openMobile){
+        openMobile.addEventListener('click', function(e){
+        e.preventDefault();
+        dropdownOpen.style.display = 'flex'
+        })
+        closeDropdown.addEventListener('click', function(e){
+        e.preventDefault();
+        dropdownOpen.style.display = 'none'
+        })
+        }
+     </script>
     <title>Home | Ferretería Belgrano</title>
 </head>
