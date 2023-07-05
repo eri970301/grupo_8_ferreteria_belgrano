@@ -18,6 +18,31 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
 }
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 1004444px;
+    width: 10000px;
+    align-items: center;
+    background-color:white;
+}
+.disppear{
+    animation: vanish 1s forwards;
+}
+@keyframes vinish {
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+#miDiv {
+    transition: opacity 0.5s; /* Transición suave de la opacidad */
+  }
+  
+  .opaco {
+    opacity: 0.5; /* Opacidad reducida */
+  }
 * {
     box-sizing: border-box;
     max-width: 100%;
