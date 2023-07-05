@@ -119,11 +119,10 @@ const users = {
   edit: (req, res) => {
     let id = req.params.id;
     db.Users.findByPk(id)
-      .then(user => {if (req.admi && req.cookies.admi) {
-      res.render('users/Edit', { user: user });
-    }else {}
-    res.render('', { usert: user })
-})
+      .then(user => {
+        return res.render('users/Edit', { user: user });
+        console.log(users)
+      })
       .catch(error => {
         console.error('Error al obtener el detalle del usuario:', error);
         res.redirect('/products');
